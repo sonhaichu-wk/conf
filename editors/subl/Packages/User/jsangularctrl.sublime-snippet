@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+function ${1}(${2:\$rootScope}, ${3:\$scope}, ${4:\$state}, ${5:\$stateParams}, ${6:API}) {
+	${7}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>jsangularctrl</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

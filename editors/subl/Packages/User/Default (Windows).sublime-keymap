@@ -1,0 +1,4 @@
+[
+	{ "keys": ["alt+shift+f"], "command": "find_use" },
+	{ "keys": ["alt+shift+n"], "command": "import_namespace" },
+]

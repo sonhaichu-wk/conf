@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+(function(app) {
+	${3:app.controller();}
+})(angular.module('${1:app}', [${2}]));
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>amd</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

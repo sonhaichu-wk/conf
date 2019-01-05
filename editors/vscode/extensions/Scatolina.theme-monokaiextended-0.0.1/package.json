@@ -1,0 +1,27 @@
+{
+ "name": "theme-monokaiextended",
+ "displayName": "Monokai Extended",
+ "description": "Unofficial port of Sublime Monokai Extended https://github.com/jonschlinkert/sublime-monokai-extended/",
+ "version": "0.0.1",
+ "publisher": "Scatolina",
+ "engines": {
+  "vscode": "^1.0.0"
+ },
+ "categories": [
+  "Themes"
+ ],
+ "contributes": {
+  "themes": [
+   {
+    "label": "Monokai Extended",
+    "uiTheme": "vs-dark",
+    "path": "./themes/Monokai%20Extended.tmTheme"
+   }
+  ]
+ },
+ "__metadata": {
+  "id": "a9087ed8-6d51-4794-940a-6d1708091b29",
+  "publisherId": "Scatolina.theme-monokaiextended",
+  "publisherDisplayName": "Scatolina"
+ }
+}

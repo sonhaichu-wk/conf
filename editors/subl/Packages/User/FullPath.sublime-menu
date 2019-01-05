@@ -1,0 +1,5 @@
+<menu>
+    <menu caption="Full Path">
+        <item caption="Copy Full Path" command="FullPath"/>
+    </menu>
+</menu>

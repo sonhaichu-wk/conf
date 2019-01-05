@@ -1,0 +1,151 @@
+{
+ "name": "php-namespace-resolver",
+ "displayName": "PHP Namespace Resolver",
+ "description": "Import and expand php namespaces",
+ "version": "1.1.0",
+ "publisher": "MehediDracula",
+ "author": "Mehedi Hassan <MehediDracula@gmail.com>",
+ "license": "SEE LICENSE IN LICENSE",
+ "engines": {
+  "vscode": "^1.15.0"
+ },
+ "categories": [
+  "Other"
+ ],
+ "keywords": [
+  "php",
+  "namespace",
+  "class",
+  "import",
+  "expand"
+ ],
+ "galleryBanner": {
+  "color": "#282c34",
+  "theme": "dark"
+ },
+ "activationEvents": [
+  "onLanguage:php",
+  "onCommand:namespaceResolver.import",
+  "onCommand:namespaceResolver.expand",
+  "onCommand:namespaceResolver.sort"
+ ],
+ "main": "./src/extension",
+ "icon": "images/icon.png",
+ "contributes": {
+  "menus": {
+   "editor/context": [
+    {
+     "when": "resourceLangId == php",
+     "command": "namespaceResolver.import",
+     "alt": "namespaceResolver.import",
+     "group": "0_namespace_resolver@1"
+    },
+    {
+     "when": "resourceLangId == php",
+     "command": "namespaceResolver.expand",
+     "alt": "namespaceResolver.expand",
+     "group": "0_namespace_resolver@2"
+    },
+    {
+     "when": "resourceLangId == php",
+     "command": "namespaceResolver.sort",
+     "alt": "namespaceResolver.sort",
+     "group": "0_namespace_resolver@3"
+    }
+   ]
+  },
+  "configuration": {
+   "type": "object",
+   "title": "PHP Namespace Resolver extension configuration",
+   "properties": {
+    "namespaceResolver.exclude": {
+     "type": "string",
+     "default": "**/node_modules/**",
+     "description": "Exclude glob pattern while finding files"
+    },
+    "namespaceResolver.showMessageOnStatusBar": {
+     "type": "boolean",
+     "default": false,
+     "description": "Show message on status bar instead of notification box"
+    },
+    "namespaceResolver.autoSort": {
+     "type": "boolean",
+     "default": true,
+     "description": "Auto sort after imports"
+    },
+    "namespaceResolver.sortOnSave": {
+     "type": "boolean",
+     "default": false,
+     "description": "Auto sort when a file is saved"
+    },
+    "namespaceResolver.sortAlphabetically": {
+     "type": "boolean",
+     "default": false,
+     "description": "Sort imports in alphabetical order instead of line length"
+    },
+    "namespaceResolver.sortNatural": {
+     "type": "boolean",
+     "default": false,
+     "description": "Sort imports using a 'natural order' algorithm"
+    },
+    "namespaceResolver.leadingSeparator": {
+     "type": "boolean",
+     "default": true,
+     "description": "Expand class with leading namespace separator"
+    }
+   }
+  },
+  "commands": [
+   {
+    "title": "Import Class",
+    "command": "namespaceResolver.import"
+   },
+   {
+    "title": "Expand Class",
+    "command": "namespaceResolver.expand"
+   },
+   {
+    "title": "Sort Imports",
+    "command": "namespaceResolver.sort"
+   }
+  ],
+  "keybindings": [
+   {
+    "command": "namespaceResolver.import",
+    "key": "ctrl+alt+i",
+    "when": "editorTextFocus"
+   },
+   {
+    "command": "namespaceResolver.expand",
+    "key": "ctrl+alt+e",
+    "when": "editorTextFocus"
+   },
+   {
+    "command": "namespaceResolver.sort",
+    "key": "ctrl+alt+s",
+    "when": "editorTextFocus"
+   }
+  ]
+ },
+ "repository": {
+  "type": "git",
+  "url": "https://github.com/MehediDracula/PHP-Namespace-Resolver"
+ },
+ "bugs": {
+  "url": "https://github.com/MehediDracula/PHP-Namespace-Resolver/issues"
+ },
+ "scripts": {
+  "postinstall": "node ./node_modules/vscode/bin/install"
+ },
+ "devDependencies": {
+  "vscode": "^1.0.0"
+ },
+ "dependencies": {
+  "node-natural-sort": "^0.8.6"
+ },
+ "__metadata": {
+  "id": "651dce1f-eda8-4a5b-aa26-0d1266de8ed1",
+  "publisherId": "MehediDracula.php-namespace-resolver",
+  "publisherDisplayName": "MehediDracula"
+ }
+}

@@ -1,0 +1,26 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Blade Snippets",
+		"CSS Format",
+		"FileIcons",
+		"GitGutter",
+		"HTMLBeautify",
+		"jsfmt",
+		"Laravel Blade Highlighter",
+		"Material Theme",
+		"Package Control",
+		"PHP Companion",
+		"phpfmt",
+		"PHPIntel",
+		"Pretty JSON",
+		"Sass",
+		"SASS Snippets",
+		"SideBarEnhancements",
+		"SublimeCodeIntel"
+	]
+}

@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+<input type="${1:text}" class="${2:form-control}" value="${3}" placeholder="${4}" ${5:required}>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ip</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

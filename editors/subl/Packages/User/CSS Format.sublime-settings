@@ -1,0 +1,12 @@
+{
+	// Code Indentation
+	//   "\t"   : 1 tab
+	//   "  "   : 2 spaces
+	//   "    " : 4 spaces
+	"indentation": "    ",
+
+	// Block Break (Expand Mode Only)
+	//   "\n"   : 1 line break after each rules block
+	//   "\n\n" : 2 line breaks after each rules block
+	"expand_block_break": "\n"
+}

@@ -1,0 +1,22 @@
+[
+	{ "keys": ["shift+ctrl+d"], "command": "duplicate_line" },
+	{ "keys": ["shift+super+f"], "command": "find_use" },
+	{ "keys": ["shift+super+n"], "command": "import_namespace" },
+	{
+        "keys": [ "ctrl+shift+f"],
+        "command": "typescript_format_document",
+        "context": [
+            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+            { "key": "num_selections", "operator": "equal", "operand": 1, "match_all": true },
+            { "key": "selector", "operator": "equal", "operand": "source.ts, source.tsx" }
+        ]
+    },
+    {
+        "keys": [ "super+option+f"],
+        "command": "typescript_find_references",
+        "context": [
+            { "key": "selector", "operator": "equal", "operand": "source.ts, source.tsx" }
+        ]
+    },
+    { "keys": ["ctrl+shift+f"], "command": "typescript_format_document" },
+]
