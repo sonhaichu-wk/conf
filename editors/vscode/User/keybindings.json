@@ -1,4 +1,22 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
+	{
+		"key": "f12",
+		"command": "editor.action.rename",
+		"when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "f2",
+		"command": "editor.action.revealDefinition",
+		"when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+	},
+	{
+		"key": "ctrl+alt+p",
+		"command": "workbench.action.openWorkspace"
+	},
+	{
+		"key": "ctrl+f11",
+		"command": "phpfmt.format"
+	},
     
 ]
