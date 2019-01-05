@@ -1,0 +1,10 @@
+{
+    "window.zoomLevel": 0,
+    "phpfmt.enable_auto_align": true,
+    "explorer.autoReveal": false,
+    "breadcrumbs.enabled": true,
+    "breadcrumbs.symbolPath": "off",
+    "editor.wordWrap": "on",
+    "editor.insertSpaces": false,
+    "editor.tabSize": 2
+}

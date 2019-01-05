@@ -1,0 +1,83 @@
+# Angular project
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+/src/environments/environment.ts
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IDE JETBRAIN
+.idea/
+
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+/.scripts
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# enviroments
+environment.ts
+
+
+
+
+# Laravel project
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/.idea
+/.vscode
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env
+.phpunit.result.cache
+
+/bower_components
+/public/hot
+/public/uploads
+/public/storage
+/public/exports
+
+/angular/._.DS_Store
+/angular/src/environments/environment.ts
+/.phpintel
+.DS_Store
+/webapp/web/node_modules
