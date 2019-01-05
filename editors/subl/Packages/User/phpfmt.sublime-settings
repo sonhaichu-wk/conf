@@ -1,19 +1,20 @@
 {
-    "format_on_save": false,
-    "indent_with_space": 4,
-    "passes": [
-        "AlignConstVisibilityEquals",
-        "AlignDoubleArrow",
-        "AlignDoubleSlashComments",
-        "AlignEquals",
-        "AlignGroupDoubleArrow",
-        "AlignPHPCode",
-        "AlignTypehint",
-        "SpaceBetweenMethods",
-        "OnlyOrderUseClauses"
-    ],
-    "psr1": false,
-    "psr1_naming": false,
-    "psr2": true,
-    "version": 1
+	"format_on_save": false,
+	"indent_with_space": 4,
+	"passes":
+	[
+		"AlignConstVisibilityEquals",
+		"AlignDoubleArrow",
+		"AlignDoubleSlashComments",
+		"AlignEquals",
+		"AlignGroupDoubleArrow",
+		"AlignPHPCode",
+		"AlignTypehint",
+		"SpaceBetweenMethods",
+		"OnlyOrderUseClauses"
+	],
+	"psr1": false,
+	"psr1_naming": false,
+	"psr2": true,
+	"version": 1
 }

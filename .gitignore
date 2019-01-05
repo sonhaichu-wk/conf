@@ -85,3 +85,5 @@ yarn-error.log
 
 ###
 /editors/vscode/User/workspaceStorage
+/editors/subl/Packages/User/Package Control.cache
+/editors/subl/Packages/User/Package Control.last-run
