@@ -81,3 +81,7 @@ yarn-error.log
 /.phpintel
 .DS_Store
 /webapp/web/node_modules
+
+
+###
+/editors/vscode/User/workspaceStorage
