@@ -1,9 +1,9 @@
 [program:laravel-worker]
 process_name=%(program_name)s_%(process_num)02d
-command=php /home/www/project_dir/artisan queue:work sqs --sleep=3 --tries=3
+command=php /home/vagrant/www/project_dir/artisan queue:work sqs --sleep=3 --tries=3
 autostart=true
 autorestart=true
 ;user=forge
 numprocs=8
 redirect_stderr=true
-stdout_logfile=/home/www/queue-log/worker.log
+stdout_logfile=/home/vagrant/www/queue-log/worker.log
