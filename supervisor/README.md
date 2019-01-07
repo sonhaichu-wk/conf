@@ -1,3 +1,9 @@
+### Create log file
+
+```
+touch ~/code/www/queue-log/laravel-worker.log
+```
+
 ### Reload supervisor
 
 ```
