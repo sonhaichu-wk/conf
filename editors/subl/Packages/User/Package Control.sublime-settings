@@ -7,6 +7,7 @@
 	[
 		"Blade Snippets",
 		"CSS Format",
+		"EditorConfig",
 		"FileIcons",
 		"GitGutter",
 		"HTMLBeautify",
@@ -22,6 +23,9 @@
 		"SASS Snippets",
 		"SideBarEnhancements",
 		"SublimeCodeIntel",
-		"SyncedSideBar"
+		"SyncedSideBar",
+		"Twig",
+		"Vue Syntax Highlight",
+		"VueFormatter"
 	]
 }
