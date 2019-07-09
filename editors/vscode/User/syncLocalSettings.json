@@ -10,14 +10,15 @@
         "state.vscdb.backup",
         "syncLocalSettings.json",
         ".DS_Store",
-        "sync.lock"
+        "sync.lock",
+        "state.*"
     ],
     "ignoreUploadFolders": [
         "workspaceStorage"
     ],
     "ignoreExtensions": [],
     "gistDescription": "Visual Studio Code Settings Sync Gist",
-    "version": 329,
+    "version": 331,
     "token": "",
     "downloadPublicGist": false,
     "supportedFileExtensions": [
@@ -32,6 +33,7 @@
     "askGistName": false,
     "customFiles": {},
     "hostName": null,
+    "universalKeybindings": false,
     "replaceCodeSettings": {},
     "useCliBaseInstallation": true
 }
