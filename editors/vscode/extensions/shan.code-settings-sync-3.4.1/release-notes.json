@@ -1,0 +1,33 @@
+{
+  "changes": [
+    {
+      "details": "Improved UI : Don't show again button",
+      "type": "NEW",
+      "color": "success",
+      "author": "arnohovhannisyan",
+      "pullRequest": "960"
+    },
+    {
+      "details": "Chinese localization improved.",
+      "type": "FIX",
+      "color": "danger",
+      "author": "ziofat",
+      "pullRequest": "961"
+    },
+    {
+      "details": "Chinese localization improved.",
+      "type": "FIX",
+      "color": "danger",
+      "author": "linsui",
+      "pullRequest": "966"
+    },
+    {
+      "details": "Russian localization improved.",
+      "type": "FIX",
+      "color": "danger",
+      "author": "AndreyWV",
+      "pullRequest": "957"
+    }
+  ],
+  "currentVersion": "v3.4.1"
+}
