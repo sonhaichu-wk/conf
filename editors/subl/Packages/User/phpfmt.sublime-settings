@@ -14,7 +14,7 @@
 		"OnlyOrderUseClauses"
 	],
 	"psr1": false,
-	"psr1_naming": true,
+	"psr1_naming": false,
 	"psr2": true,
 	"version": 1
 }

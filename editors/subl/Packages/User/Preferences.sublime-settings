@@ -6,6 +6,6 @@
 		"Vintage"
 	],
 	"tab_size": 2,
-	"theme": "Material-Theme-Darker.sublime-theme",
-	"telex": true
+	"telex": true,
+	"theme": "Material-Theme-Darker.sublime-theme"
 }
