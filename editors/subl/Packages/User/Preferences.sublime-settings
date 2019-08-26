@@ -7,5 +7,6 @@
 	],
 	"tab_size": 2,
 	"telex": true,
-	"theme": "Material-Theme-Darker.sublime-theme"
+	"theme": "Material-Theme-Darker.sublime-theme",
+	"word_wrap": true
 }
