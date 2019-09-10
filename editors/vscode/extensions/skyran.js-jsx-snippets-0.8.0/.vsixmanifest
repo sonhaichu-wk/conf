@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Language="en-US" Id="js-jsx-snippets" Version="0.6.0" Publisher="skyran"/>
+    <Identity Language="en-US" Id="js-jsx-snippets" Version="0.8.0" Publisher="skyran"/>
     <DisplayName>JS JSX Snippets</DisplayName>
     <Description xml:space="preserve">Simple extensions for React, Redux in JS with babel and ES6 syntax</Description>
     <Tags>snippet,javascript</Tags>

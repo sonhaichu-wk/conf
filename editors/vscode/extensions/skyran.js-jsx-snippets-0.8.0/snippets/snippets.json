@@ -17,31 +17,6 @@
     ],
     "description": "Import react"
   },
-  "import React, { Component }": {
-    "prefix": "imrc",
-    "body": "import React, { Component } from 'react';"
-  },
-  "import React, { useState }": {
-    "prefix": "imrs",
-    "body": [
-      "import React, { useState } from 'react';",
-      ""
-    ]
-  },
-  "import React, { useEffect }": {
-    "prefix": "imre",
-    "body": [
-      "import React, { useEffect } from 'react';",
-      ""
-    ]
-  },
-  "Import PropTypes": {
-    "prefix": "ipt",
-    "body": [
-      "import PropTypes from 'prop-types';"
-    ],
-    "description": "Import PropTypes"
-  },
   "Comment Block": {
     "prefix": "comment",
     "body": [
@@ -52,7 +27,7 @@
   },
   "consoleLog": {
     "prefix": "clg",
-    "body": "console.log($1)",
+    "body": "console.log($1);",
     "description": "Displays a message in the console"
   },
   "reactClassComponent": {
@@ -82,12 +57,7 @@
       "import PropTypes from 'prop-types';",
       "",
       "",
-      "const propTypes = {",
-      "\t",
-      "};",
-      "",
-      "",
-      "export class ${1:$TM_FILENAME_BASE} extends Component {",
+      "class ${1:$TM_FILENAME_BASE} extends Component {",
       "\trender() {",
       "\t\treturn (",
       "\t\t\t<div>",
@@ -98,7 +68,9 @@
       "}",
       "",
       "",
-      "${1:$TM_FILENAME_BASE}.propTypes = propTypes;",
+      "${1:$TM_FILENAME_BASE}.propTypes = {",
+      "\t",
+      "};",
       "",
       "",
       "export default ${1:$TM_FILENAME_BASE};",
@@ -131,11 +103,6 @@
       "import PropTypes from 'prop-types';",
       "",
       "",
-      "const propTypes = {",
-      "\t$0",
-      "};",
-      "",
-      "",
       "const ${1:$TM_FILENAME_BASE} = () => {",
       "\treturn (",
       "\t\t<div>",
@@ -145,7 +112,9 @@
       "};",
       "",
       "",
-      "${1:$TM_FILENAME_BASE}.propTypes = propTypes;",
+      "${1:$TM_FILENAME_BASE}.propTypes = {",
+      "\t$0",
+      "};",
       "",
       "",
       "export default ${1:$TM_FILENAME_BASE};",
@@ -163,17 +132,6 @@
       ""
     ],
     "description": "Adds a default constructor for the class that contains props as arguments"
-  },
-  "classConstructorContext": {
-    "prefix": "conc",
-    "body": [
-      "constructor(props, context) {",
-      "\tsuper(props, context);",
-      "\t$1",
-      "}",
-      ""
-    ],
-    "description": "Adds a default constructor for the class that contains props and context as arguments"
   },
   "emptyState": {
     "prefix": "est",
@@ -322,16 +280,6 @@
     "body": "PropTypes.number.isRequired,",
     "description": "Number prop type required"
   },
-  "propTypeObject": {
-    "prefix": "pto",
-    "body": "PropTypes.object,",
-    "description": "Object prop type"
-  },
-  "propTypeObjectRequired": {
-    "prefix": "ptor",
-    "body": "PropTypes.object.isRequired,",
-    "description": "Object prop type required"
-  },
   "propTypeString": {
     "prefix": "pts",
     "body": "PropTypes.string,",
@@ -452,9 +400,9 @@
     "prefix": "test",
     "body": [
       "test('should $1', () => {",
-      "\t$0",
+      "\t$2",
       "});",
-      ""
+      "$0"
     ],
     "description": "Testing `test` block"
   },
@@ -462,9 +410,9 @@
     "prefix": "it",
     "body": [
       "it('should $1', () => {",
-      "\t$0",
+      "\t$2",
       "});",
-      ""
+      "$0"
     ],
     "description": "Testing `it` block"
   },

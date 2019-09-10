@@ -1,7 +1,7 @@
 #!/bin/bash
 
 prj_name='laravel-test'
-prj_version='5.7.*'
+prj_version='5.8.*'
 
 if [ -n "$1" ]; then
   prj_name=$1;

@@ -20,34 +20,27 @@ After install this snippets add this inside your settings
 | -------: | ------- |
 | `imp`   | `import name from 'module';` |
 | `imd`  | `import {  } from 'module';` |
-| `exp`  | `export default moduleName;` |
-| `rqr`  | `require('package');` |
-| `mde`  | `module.exports = { };` |
 
 ## Import package
-| Trigger  | Content |
-| -------: | ------- |
-| `imr`   | `import React from 'react';` |
-| `imrc`   | `import React, { Component } from 'react';` |
-| `imrs`   | `import React, { useState } from 'react';` |
-| `imre`   | `import React, { useEffect } from 'react';` |
-| `ipt`   | `import PropTypes from 'prop-types';` |
+| Trigger  | Content | Description |
+| -------: | ------- | ------- |
+| `imr`   | `import React from 'react';` | useful in test |
 
 ## Basic methods
 | Trigger  | Content |
 | -------: | ------- |
 | `comment`   | Comment Block |
-| `clg`   | `console.log()` |
+| `clg`   | `console.log();` |
 
 ## React components
+Only contain class component and function component.
 | Trigger  | Content |
 | -------: | ------- |
 | `rcc`   | class component skeleton |
 | `rccp`  | class component skeleton with prop types after the class |
-| `rfc`   | stateless component skeleton |
-| `rfcp`  | stateless component with prop types skeleton |
+| `rfc`   | function component skeleton |
+| `rfcp`  | function component with prop types skeleton |
 | `con`   | class default constructor with props|
-| `conc`  | class default constructor with props and context |
 | `est`   | empty state object |
 | `cdm`   | `componentDidMount method` |
 | `scu`   | `shouldComponentUpdate method` |
@@ -74,6 +67,8 @@ After install this snippets add this inside your settings
 
 
 ## PropTypes
+Remove `PropTypes.object.isRequired,`, because EsLint not allowed.
+
 | Trigger  | Content |
 | -------: | ------- |
 | `pta`   | `PropTypes.array,` |
@@ -84,8 +79,6 @@ After install this snippets add this inside your settings
 | `ptfr`  | `PropTypes.func.isRequired,` |
 | `ptn`   | `PropTypes.number,` |
 | `ptnr`  | `PropTypes.number.isRequired,` |
-| `pto`   | `PropTypes.object.,` |
-| `ptor`  | `PropTypes.object.isRequired,` |
 | `pts`   | `PropTypes.string,` |
 | `ptsr`  | `PropTypes.string.isRequired,` |
 | `ptnd`  | `PropTypes.node,` |
