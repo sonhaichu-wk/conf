@@ -36,5 +36,6 @@
     "javascript.updateImportsOnFileMove.enabled": "always",
     "[vue]": {
         "editor.defaultFormatter": "octref.vetur"
-    }
+    },
+    "editor.lineHeight": 35
 }

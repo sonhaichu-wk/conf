@@ -1,7 +1,7 @@
 {
 	"name": "debugger-for-chrome",
 	"displayName": "Debugger for Chrome",
-	"version": "4.12.1",
+	"version": "4.12.2",
 	"icon": "images/icon.png",
 	"description": "%extension.description%",
 	"author": {
@@ -13,7 +13,9 @@
 	},
 	"publisher": "msjsdiag",
 	"bugs": "https://github.com/microsoft/vscode-chrome-debug/issues",
-	"extensionKind": "ui",
+	"extensionKind": [
+		"ui"
+	],
 	"engines": {
 		"vscode": "^1.17.0"
 	},
@@ -25,7 +27,7 @@
 	],
 	"license": "SEE LICENSE IN LICENSE.txt",
 	"dependencies": {
-		"vscode-chrome-debug-core": "^6.8.4",
+		"vscode-chrome-debug-core": "^6.8.6",
 		"vscode-debugadapter": "^1.37.1",
 		"vscode-nls": "^4.1.1"
 	},

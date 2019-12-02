@@ -78,7 +78,7 @@ jobs:
         notificationAlias: 'webdiag-extensions@microsoft.com'
         instanceUrlForTsaV2: DEVDIV
         projectNameDEVDIV: DevDiv
-        areaPath: 'DevDiv\Client Platform\HTML Experiences\Diagnostics\Debugger'
+        areaPath: 'DevDiv\TypeScript\HTML Experiences\Diagnostics\Debugger'
         uploadAPIScan: false
         uploadBinSkim: false
         uploadFortifySCA: false
@@ -88,6 +88,7 @@ jobs:
         uploadPREfast: false
         uploadRoslyn: false
         uploadTSLint: false
+
 
   - ${{ if eq(parameters.name, 'Windows') }}:
     - task: securedevelopmentteam.vss-secure-development-tools.build-task-publishsecurityanalysislogs.PublishSecurityAnalysisLogs@2
