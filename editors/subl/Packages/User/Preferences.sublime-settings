@@ -5,8 +5,8 @@
 	[
 		"Vintage"
 	],
-	"line_padding_bottom": 7,
-	"line_padding_top": 7,
+	"line_padding_bottom": 10,
+	"line_padding_top": 10,
 	"tab_size": 2,
 	"telex": true,
 	"theme": "Material-Theme-Darker.sublime-theme",
