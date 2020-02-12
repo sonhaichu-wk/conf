@@ -207,6 +207,9 @@
     "silverstripe": {
       "iconPath": "./../icons/silverstripe.svg"
     },
+    "prolog": {
+      "iconPath": "./../icons/prolog.svg"
+    },
     "html": {
       "iconPath": "./../icons/html.svg"
     },
@@ -255,8 +258,14 @@
     "csharp": {
       "iconPath": "./../icons/csharp.svg"
     },
+    "qsharp": {
+      "iconPath": "./../icons/qsharp.svg"
+    },
     "zip": {
       "iconPath": "./../icons/zip.svg"
+    },
+    "zig": {
+      "iconPath": "./../icons/zig.svg"
     },
     "exe": {
       "iconPath": "./../icons/exe.svg"
@@ -833,6 +842,12 @@
     },
     "fortran": {
       "iconPath": "./../icons/fortran.svg"
+    },
+    "liquid": {
+      "iconPath": "./../icons/liquid.svg"
+    },
+    "husky": {
+      "iconPath": "./../icons/husky.svg"
     },
     "file": {
       "iconPath": "./../icons/file.svg"
@@ -1575,6 +1590,12 @@
     "folder-svg-open": {
       "iconPath": "./../icons/folder-svg-open.svg"
     },
+    "folder-mobile": {
+      "iconPath": "./../icons/folder-mobile.svg"
+    },
+    "folder-mobile-open": {
+      "iconPath": "./../icons/folder-mobile-open.svg"
+    },
     "folder": {
       "iconPath": "./../icons/folder.svg"
     },
@@ -1971,7 +1992,10 @@
     "pipe": "folder-pipe",
     "pipes": "folder-pipe",
     "svg": "folder-svg",
-    "svgs": "folder-svg"
+    "svgs": "folder-svg",
+    "mobile": "folder-mobile",
+    "mobiles": "folder-mobile",
+    "portable": "folder-mobile"
   },
   "folderNamesExpanded": {
     "src": "folder-src-open",
@@ -2356,7 +2380,10 @@
     "pipe": "folder-pipe-open",
     "pipes": "folder-pipe-open",
     "svg": "folder-svg-open",
-    "svgs": "folder-svg-open"
+    "svgs": "folder-svg-open",
+    "mobile": "folder-mobile-open",
+    "mobiles": "folder-mobile-open",
+    "portable": "folder-mobile-open"
   },
   "fileExtensions": {
     "html": "html",
@@ -2376,6 +2403,7 @@
     "less": "less",
     "json": "json",
     "tsbuildinfo": "json",
+    "json5": "json",
     "jinja": "jinja",
     "jinja2": "jinja",
     "j2": "jinja",
@@ -2504,6 +2532,7 @@
     "psql": "database",
     "cs": "csharp",
     "csx": "csharp",
+    "qs": "qsharp",
     "zip": "zip",
     "tar": "zip",
     "gz": "zip",
@@ -2515,6 +2544,7 @@
     "7z": "zip",
     "rar": "zip",
     "tgz": "zip",
+    "zig": "zig",
     "exe": "exe",
     "msi": "exe",
     "java": "java",
@@ -2695,7 +2725,6 @@
     "lock": "lock",
     "hbs": "handlebars",
     "mustache": "handlebars",
-    "pl": "perl",
     "pm": "perl",
     "hx": "haxe",
     "spec.ts": "test-ts",
@@ -2888,9 +2917,15 @@
     "f90": "fortran",
     "f95": "fortran",
     "f03": "fortran",
-    "f08": "fortran"
+    "f08": "fortran",
+    "liquid": "liquid",
+    "p": "prolog",
+    "pro": "prolog"
   },
   "fileNames": {
+    ".pug-lintrc": "pug",
+    ".pug-lintrc.js": "pug",
+    ".pug-lintrc.json": "pug",
     ".jscsrc": "json",
     ".jshintrc": "json",
     "tsconfig.json": "json",
@@ -2988,12 +3023,16 @@
     "webpack.config.common.babel.ts": "webpack",
     "webpack.dev.js": "webpack",
     "webpack.dev.ts": "webpack",
+    "webpack.development.js": "webpack",
+    "webpack.development.ts": "webpack",
     "webpack.config.dev.js": "webpack",
     "webpack.config.dev.ts": "webpack",
     "webpack.config.dev.babel.js": "webpack",
     "webpack.config.dev.babel.ts": "webpack",
     "webpack.prod.js": "webpack",
     "webpack.prod.ts": "webpack",
+    "webpack.production.js": "webpack",
+    "webpack.production.ts": "webpack",
     "webpack.server.js": "webpack",
     "webpack.server.ts": "webpack",
     "webpack.client.js": "webpack",
@@ -3049,11 +3088,15 @@
     ".yarnclean": "yarn",
     ".yarn-integrity": "yarn",
     "yarn-error.log": "yarn",
+    ".yarnrc.yml": "yarn",
+    ".yarnrc.yaml": "yarn",
     "androidmanifest.xml": "android",
     ".env.example": "tune",
+    ".env.sample": "tune",
     ".env.local": "tune",
     ".env.dev": "tune",
     ".env.development": "tune",
+    ".env.qa": "tune",
     ".env.prod": "tune",
     ".env.production": "tune",
     ".env.staging": "tune",
@@ -3061,7 +3104,9 @@
     ".env.test": "tune",
     ".env.testing": "tune",
     ".env.development.local": "tune",
+    ".env.qa.local": "tune",
     ".env.production.local": "tune",
+    ".env.staging.local": "tune",
     ".env.test.local": "tune",
     ".babelrc": "babel",
     ".babelrc.js": "babel",
@@ -3201,6 +3246,7 @@
     ".bazelignore": "bazel",
     ".bazelrc": "bazel",
     "azure-pipelines.yml": "azure-pipelines",
+    "azure-pipelines.yaml": "azure-pipelines",
     "vagrantfile": "vagrant",
     "prisma.yml": "prisma",
     ".nycrc": "istanbul",
@@ -3220,7 +3266,12 @@
     ".percy.yml": "percy",
     ".gitpod.yml": "gitpod",
     "codeowners": "codeowners",
-    ".gcloudignore": "gcp"
+    ".gcloudignore": "gcp",
+    ".huskyrc": "husky",
+    "husky.config.js": "husky",
+    ".huskyrc.json": "husky",
+    ".huskyrc.yaml": "husky",
+    ".huskyrc.yml": "husky"
   },
   "languageIds": {
     "git": "git",
@@ -3297,7 +3348,8 @@
     "django-html": "django",
     "django-txt": "django",
     "gdscript": "godot",
-    "viml": "vim"
+    "viml": "vim",
+    "prolog": "prolog"
   },
   "light": {
     "fileExtensions": {

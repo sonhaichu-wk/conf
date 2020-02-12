@@ -1,6 +1,5 @@
 {
     "window.zoomLevel": 0,
-    "phpfmt.enable_auto_align": true,
     "explorer.autoReveal": false,
     "breadcrumbs.enabled": true,
     "breadcrumbs.symbolPath": "off",
@@ -37,5 +36,6 @@
     "[vue]": {
         "editor.defaultFormatter": "octref.vetur"
     },
-    "editor.lineHeight": 35
+    "editor.lineHeight": 35,
+    "phpfmt.enable_auto_align": true
 }

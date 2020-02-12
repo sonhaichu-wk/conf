@@ -58,8 +58,8 @@
     "body": [
       "import { Injectable } from '@angular/core';",
       "",
-      "@Injectable({providedIn: ${2:'root'}})",
-      "export class ${1:ServiceName}Service {",
+      "@Injectable({providedIn: ${1:'root'}})",
+      "export class ${2:ServiceName}Service {",
       "\tconstructor() { }",
       "\t$0",
       "}"
@@ -107,9 +107,9 @@
     "prefix": "a-route-params-subscribe",
     "description": "Angular - subscribe to routing parameters",
     "body": [
-      "this.route.params",
-      "\t.pipe(map(params => params['id']), tap(id => (this.id = +id)))",
-      "\t.subscribe(id => ${1:function()}());",
+      "this.route.paramMap",
+      "\t.pipe(switchMap(params => params.get('id')), tap(id => (this.id = +id)))",
+      "\t.subscribe(id => {$1});",
       "$0"
     ]
   },
@@ -125,8 +125,8 @@
       "import { Injectable } from '@angular/core';",
       "import { HttpClient } from '@angular/common/http';",
       "",
-      "@Injectable({providedIn: ${2:'root'}})",
-      "export class ${1:ServiceName}Service {",
+      "@Injectable({providedIn: ${1:'root'}})",
+      "export class ${2:ServiceName}Service {",
       "\tconstructor(private httpClient: HttpClient) { }",
       "\t$0",
       "}"
@@ -137,7 +137,8 @@
     "description": "Angular HttpInterceptor for Logging HttpClient",
     "body": [
       "import { HttpInterceptor, HttpHandler, HttpRequest, HttpEvent, HttpResponse } from '@angular/common/http';",
-      "import { Observable, tap } from 'rxjs';",
+      "import { Observable } from 'rxjs';",
+      "import { tap } from 'rxjs/operators';",
       "",
       "@Injectable()",
       "export class LogInterceptor implements HttpInterceptor {",
@@ -296,8 +297,8 @@
       "import { Injectable } from '@angular/core';",
       "import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot } from '@angular/router';",
       "",
-      "@Injectable({providedIn: ${2:'root'}})",
-      "export class ${1:Name}Guard implements CanActivate {",
+      "@Injectable({providedIn: ${1:'root'}})",
+      "export class ${2:Name}Guard implements CanActivate {",
       "\tconstructor() { }",
       "",
       "\tcanActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {",
@@ -313,8 +314,8 @@
       "import { Injectable } from '@angular/core';",
       "import { ActivatedRouteSnapshot, CanActivateChild, RouterStateSnapshot } from '@angular/router';",
       "",
-      "@Injectable({providedIn: ${2:'root'}})",
-      "export class ${1:Name}Guard implements CanActivateChild {",
+      "@Injectable({providedIn: ${1:'root'}})",
+      "export class ${2:Name}Guard implements CanActivateChild {",
       "\tconstructor() { }",
       "",
       "\tcanActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {",
@@ -330,8 +331,8 @@
       "import { Injectable } from '@angular/core';",
       "import { CanLoad, Route } from '@angular/router';",
       "",
-      "@Injectable({providedIn: ${2:'root'}})",
-      "export class ${1:Name}Guard implements CanLoad {",
+      "@Injectable({providedIn: ${1:'root'}})",
+      "export class ${2:Name}Guard implements CanLoad {",
       "\tconstructor() { }",
       "",
       "\tcanLoad(route: Route) {",
@@ -371,9 +372,9 @@
       "}"
     ]
   },
-  "Angular Custom Preload Strategy": {
-    "prefix": "a-preload-strategy",
-    "description": "Angular custom preload strategy",
+  "Angular Opt-In Preload Strategy": {
+    "prefix": "a-preload-opt-in-strategy",
+    "description": "Angular opt-in preload strategy",
     "body": [
       "import { PreloadingStrategy, Route } from '@angular/router';",
       "import { Observable, of } from 'rxjs';",
@@ -384,6 +385,40 @@
       "\t}",
       "}",
       "$0"
+    ]
+  },
+  "Angular Network-Aware Preload Strategy": {
+  "prefix": "a-preload-network-strategy",
+    "description": "Angular network aware preload strategy",
+    "body": [
+      "import { Injectable } from '@angular/core';",
+      "import { PreloadingStrategy, Route } from '@angular/router';",
+      "import { Observable, EMPTY } from 'rxjs';",
+      "",
+      "// avoid typing issues for now",
+      "export declare var navigator;",
+      "",
+      "@Injectable({ providedIn: 'root' })",
+      "export class NetworkAwarePreloadStrategy implements PreloadingStrategy {",
+      "\tpreload(route: Route, load: () => Observable<any>): Observable<any> {",
+      "\t\treturn this.hasGoodConnection() ? load() : EMPTY;",
+      "\t}",
+      "",
+      "\thasGoodConnection(): boolean {",
+      "\t\tconst conn = navigator.connection;",
+      "\t\tif (conn) {",
+      "\t\t\tif (conn.saveData) {",
+      "\t\t\t\treturn false; // save data mode is enabled, so dont preload",
+      "\t\t\t}",
+      "\t\t\tconst avoidTheseConnections = ['slow-2g', '2g' /* , '3g', '4g' */];",
+      "\t\t\tconst effectiveType = conn.effectiveType || '';",
+      "\t\t\tif (avoidTheseConnections.includes(effectiveType)) {",
+      "\t\t\t\treturn false;",
+      "\t\t\t}",
+      "\t\t}",
+      "\t\treturn true;",
+      "\t}",
+      "}"
     ]
   },
   "Angular Router Events": {
@@ -435,9 +470,9 @@
       "import { Resolve, ActivatedRouteSnapshot } from '@angular/router';",
       "import { Observable } from 'rxjs';",
       "",
-      "@Injectable({ providedIn: 'root' })",
-      "export class ${1:YourResolver} implements Resolve<${2:ObjectToResolve}> {",
-      "\tresolve(route: ActivatedRouteSnapshot): Observable<${2:ObjectToResolve}> | Promise<${2:ObjectToResolve}> | ${2:ObjectToResolve} {",
+      "@Injectable({ providedIn: ${1:'root'} })",
+      "export class ${2:YourResolver} implements Resolve<${3:ObjectToResolve}> {",
+      "\tresolve(route: ActivatedRouteSnapshot): Observable<${3:ObjectToResolve}> | Promise<${3:ObjectToResolve}> | ${3:ObjectToResolve} {",
       "\t\treturn ${0};",
       "\t}",
       "}"
@@ -491,27 +526,28 @@
     "prefix": "a-ngrx-create-effect",
     "description": "Creates an NgRx Effect",
     "body": [
-      "${1:effectName}$ = createEffect(() => this.actions$.pipe(",
-      "\tofType(${2:action}),",
-      "\t/** An EMPTY observable only emits completion. Replace with your own observable stream */",
-      "\t${3:operator}(() => ${4:EMPTY})",
-      "\t)",
-      ");"
+      "${1:effectName}$ = createEffect(() => {",
+      "\treturn this.actions$.pipe(",
+      "\t\t\tofType(${2:action}),",
+      "\t\t\t/** An EMPTY observable only emits completion. Replace with your own observable stream */",
+      "\t\t\t${3:operator}(() => ${4:EMPTY}));",
+      "});"
     ]
   },
   "NgRx Create Effect for API Call": {
     "prefix": "a-ngrx-create-effect-api",
     "description": "Creates an NgRx Effect Scaffolded for API Call",
     "body": [
-      "${1:effectName}$ = createEffect(() => this.actions$.pipe(",
-      "\tofType(${2:Feature}Actions.${3:action}),",
-      "\t${4:operator}(() =>",
-      "\t\t${5:apiSource}.pipe(",
-      "\t\t\tmap(data => $2Actions.$3Success({ data })),",
-      "\t\t\tcatchError(error => of($2Actions.$3Failure({ error }))))",
-      "\t\t)",
-      "\t)",
-      ");"
+      "${1:effectName}$ = createEffect(() => {",
+      "\treturn this.actions$.pipe(",
+      "\t\t\tofType(${2:Feature}Actions.${3:action}),",
+      "\t\t\t${4:operator}(() =>",
+      "\t\t\t\t${5:apiSource}.pipe(",
+      "\t\t\t\t\tmap(data => $2Actions.$3Success({ data })),",
+      "\t\t\t\t\tcatchError(error => of($2Actions.$3Failure({ error }))))",
+      "\t\t\t\t),",
+      "\t);",
+      "});"
     ]
   },
   "NgRx Create Selector": {
@@ -565,7 +601,7 @@
       "} from '@ngrx/data';",
       "import { ${1:Model} } from '${2:../core}';",
       "",
-      "@Injectable({ providedIn: 'root' })",
+      "@Injectable({ providedIn: ${3:'root'} })",
       "export class ${1:Model}Service extends EntityCollectionServiceBase<${1:Model}> {",
       "  constructor(serviceElementsFactory: EntityCollectionServiceElementsFactory) {",
       "    super('${1:Model}', serviceElementsFactory);",
