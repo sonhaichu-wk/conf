@@ -1,3 +1,3 @@
 #!/bin/bash
 
-subl /etc/nginx/sites-available/
+sudo subl /etc/nginx/sites-available/

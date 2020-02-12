@@ -1,3 +1,3 @@
 #!/bin/bash
 
-subl /etc/apache2/sites-available/
+sudo subl /etc/apache2/sites-available/
