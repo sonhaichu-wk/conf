@@ -1,0 +1,26 @@
+{
+  "name": "vega-util",
+  "version": "1.13.1",
+  "description": "JavaScript utilities for Vega.",
+  "keywords": [
+    "vega",
+    "utilities"
+  ],
+  "license": "BSD-3-Clause",
+  "author": "Jeffrey Heer (http://idl.cs.washington.edu)",
+  "main": "build/vega-util.js",
+  "module": "index",
+  "types": "index.d.ts",
+  "repository": "vega/vega",
+  "scripts": {
+    "rollup": "rollup -f umd -n vega -o build/vega-util.js -- index.js",
+    "prebuild": "rimraf build && mkdir build",
+    "build": "yarn rollup",
+    "postbuild": "terser build/vega-util.js -c -m -o build/vega-util.min.js",
+    "pretest": "yarn prebuild && yarn rollup",
+    "test": "tape 'test/**/*-test.js' && eslint index.js src test && tsc",
+    "prepublishOnly": "yarn test && yarn build",
+    "postpublish": "git push && git push --tags"
+  },
+  "gitHead": "2bee653f2a56c2c0d4393d69d172b9ccdb0fe2f9"
+}
