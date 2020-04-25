@@ -3,5 +3,10 @@
 	{ "keys": ["ctrl+alt+p"], "command": "prompt_select_workspace" },
 	{ "keys": ["f5"], "command": "find_use" },
 	{ "keys": ["f3"], "command": "import_namespace" },
-	{ "keys": ["f2"], "command": "goto_definition_scope" }
+	{ "keys": ["f2"], "command": "goto_definition_scope" },
+	{ 
+    "keys": ["ctrl+i"], 
+    "command": "run_macro_file", 
+    "args": {"file": "res://Packages/User/initialize_properties.sublime-macro"} 
+	}
 ]
