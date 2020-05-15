@@ -1,0 +1,51 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:vue/vu3-recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "key-spacing": 0,
+    "max-len": [
+      2,
+      180,
+      2
+    ],
+    "object-curly-spacing": [
+      2,
+      "always"
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "all"
+      }
+    ],
+    "no-unused-expressions": 0,
+    "space-after-function-name": 0,
+    "no-useless-call": 0,
+    "camelcase": 0,
+    "space-before-function-paren": 0,
+    "semi": 0,
+    "new-cap": 0,
+    "prefer-const": 1,
+    "quotes": [
+      2,
+      "single"
+    ],
+    "react/prop-types": 0,
+    "require-yield": "off"
+  }
+}
