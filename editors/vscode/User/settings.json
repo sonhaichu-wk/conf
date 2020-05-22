@@ -34,7 +34,7 @@
     },
     "javascript.updateImportsOnFileMove.enabled": "always",
     "[vue]": {
-        "editor.defaultFormatter": "octref.vetur"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "editor.lineHeight": 35,
     "phpfmt.enable_auto_align": true
