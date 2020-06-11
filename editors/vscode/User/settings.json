@@ -37,5 +37,18 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "editor.lineHeight": 35,
-    "phpfmt.enable_auto_align": true
+    "phpfmt.enable_auto_align": true,
+    "yaml.schemas": {
+        "file:///home/sonhaichu/.vscode/extensions/atlassian.atlascode-2.6.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "atlascode.jira.jqlList": [
+        {
+            "id": "2c60082f-d1a3-44b4-8742-1e7d74356275",
+            "enabled": true,
+            "name": "My reflaunt Issues",
+            "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+            "siteId": "3d2e5ec2-04b6-45e2-b9e4-2ebe79d59e1c",
+            "monitor": true
+        }
+    ]
 }
