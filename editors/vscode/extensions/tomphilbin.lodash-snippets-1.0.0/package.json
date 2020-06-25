@@ -1,0 +1,65 @@
+{
+	"name": "lodash-snippets",
+	"displayName": "Lodash Snippets",
+	"description": "Snippets for Lodash functions.",
+	"version": "1.0.0",
+	"publisher": "tomphilbin",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tomphilbin/lodash-snippets.git"
+	},
+	"author": "Tom Philbin",
+	"license": "MIT",
+	"scripts": {
+		"vscode:prepublish": "node index.js",
+		"test": "jest"
+	},
+	"devDependencies": {
+		"jest": "19.0.2",
+		"jsdoc": "3.4.3",
+		"lodash": "4.17.4",
+		"lodash.filter": "4.6.0",
+		"lodash.map": "4.6.0",
+		"lodash.reduce": "4.6.0",
+		"winston": "2.3.1"
+	},
+	"engines": {
+		"vscode": "^0.10.10"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"keywords": [
+		"Javascript",
+		"Typescript",
+		"Lo-Dash",
+		"lodash",
+		"snippets"
+	],
+	"icon": "lodash-icon.png",
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "fa397681-1503-4294-8cc6-8a4f826d32e2",
+		"publisherId": "b2a2c063-63d4-4cbd-82cf-dfe3b771e29d",
+		"publisherDisplayName": "Tom Philbin"
+	}
+}

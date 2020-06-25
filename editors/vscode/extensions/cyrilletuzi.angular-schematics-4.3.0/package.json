@@ -1,0 +1,195 @@
+{
+	"version": "4.3.0",
+	"name": "angular-schematics",
+	"displayName": "Angular Schematics",
+	"description": "Angular schematics (CLI commands) from files Explorer or Command Palette.",
+	"keywords": [
+		"angular",
+		"angular cli",
+		"schematics",
+		"angular schematics",
+		"multi-root ready"
+	],
+	"categories": [
+		"Other"
+	],
+	"icon": "icon-angular.png",
+	"license": "MIT",
+	"publisher": "cyrilletuzi",
+	"author": {
+		"name": "cyrilletuzi",
+		"url": "https://www.cyrilletuzi.com/en/web/"
+	},
+	"contributors": [
+		{
+			"name": "cyrilletuzi",
+			"url": "https://www.cyrilletuzi.com/en/web/"
+		}
+	],
+	"homepage": "https://github.com/cyrilletuzi/vscode-angular-schematics/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cyrilletuzi/vscode-angular-schematics/"
+	},
+	"bugs": {
+		"url": "https://github.com/cyrilletuzi/vscode-angular-schematics/issues"
+	},
+	"qna": false,
+	"engines": {
+		"vscode": "^1.41.0"
+	},
+	"activationEvents": [
+		"workspaceContains:**/angular.json",
+		"workspaceContains:**/.angular.json",
+		"workspaceContains:**/angular-cli.json",
+		"workspaceContains:**/.angular-cli.json"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "ngschematics.generateComponent",
+				"title": "Angular: Generate a component"
+			},
+			{
+				"command": "ngschematics.generateService",
+				"title": "Angular: Generate a service"
+			},
+			{
+				"command": "ngschematics.generateModule",
+				"title": "Angular: Generate a module"
+			},
+			{
+				"command": "ngschematics.generate",
+				"title": "Angular: Generate another schematic"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "ngschematics.generateComponent",
+					"group": "angularschematics@1",
+					"when": "inAngularProject"
+				},
+				{
+					"command": "ngschematics.generateService",
+					"group": "angularschematics@2",
+					"when": "inAngularProject"
+				},
+				{
+					"command": "ngschematics.generateModule",
+					"group": "angularschematics@3",
+					"when": "inAngularProject"
+				},
+				{
+					"command": "ngschematics.generate",
+					"group": "angularschematics@4",
+					"when": "inAngularProject"
+				}
+			]
+		},
+		"configuration": [
+			{
+				"title": "Angular Schematics",
+				"properties": {
+					"ngschematics.schematics": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"default": [],
+						"description": "Add other schematics (for example: \"@angular/material\")",
+						"scope": "resource"
+					},
+					"ngschematics.componentTypes": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"label": {
+									"type": "string",
+									"description": "Required component type's name, must be unique."
+								},
+								"options": {
+									"type": "array",
+									"items": {
+										"type": "array",
+										"items": {
+											"type": "string"
+										},
+										"minItems": 2,
+										"maxItems": 2
+									},
+									"description": "Required list of custom options for this component type, eg. \"[[\"changeDetection\", \"OnPush\"], [\"export\", \"true\"]]\""
+								},
+								"detail": {
+									"type": "string",
+									"description": "Optional human description of this component type"
+								}
+							},
+							"required": [
+								"label",
+								"options"
+							]
+						},
+						"default": [],
+						"description": "Add custom component types",
+						"scope": "resource"
+					}
+				}
+			}
+		],
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "angular",
+					"title": "Angular",
+					"icon": "angular.svg"
+				}
+			]
+		},
+		"views": {
+			"angular": [
+				{
+					"id": "angular-schematics",
+					"name": "Schematics",
+					"when": "inAngularProject"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production",
+		"compile": "webpack --mode development",
+		"watch": "webpack --mode development --watch --info-verbosity verbose",
+		"pretest": "tsc -p ./",
+		"test": "node ./out/test/runTest.js",
+		"lint": "eslint src --ext ts",
+		"release:patch": "vsce publish patch && git push && git push --tags && vsce package",
+		"release:minor": "vsce publish minor && git push && git push --tags && vsce package",
+		"release:major": "vsce publish major && git push && git push --tags && vsce package"
+	},
+	"devDependencies": {
+		"@types/glob": "7.1.2",
+		"@types/mocha": "7.0.2",
+		"@types/node": "12.12.47",
+		"@types/vscode": "1.41.0",
+		"@typescript-eslint/eslint-plugin": "3.2.0",
+		"@typescript-eslint/parser": "3.2.0",
+		"eslint": "7.2.0",
+		"glob": "7.1.6",
+		"mocha": "7.2.0",
+		"ts-loader": "7.0.5",
+		"typescript": "3.9.5",
+		"vsce": "1.76.1",
+		"vscode-test": "1.4.0",
+		"webpack": "4.43.0",
+		"webpack-cli": "3.3.11"
+	},
+	"dependencies": {},
+	"__metadata": {
+		"id": "e0b91637-e16b-4a66-b531-4459c494f514",
+		"publisherId": "172d8a24-f5aa-4f96-8014-79b9f04f946e",
+		"publisherDisplayName": "Cyrille Tuzi"
+	}
+}
