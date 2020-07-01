@@ -39,7 +39,7 @@
     "editor.lineHeight": 35,
     "phpfmt.enable_auto_align": true,
     "yaml.schemas": {
-        "file:///home/sonhaichu/.vscode/extensions/atlassian.atlascode-2.6.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///home/sonhaichu/.vscode/extensions/atlassian.atlascode-2.6.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "atlascode.jira.jqlList": [
         {
@@ -51,5 +51,9 @@
             "monitor": true
         }
     ],
-    "tslint.alwaysShowRuleFailuresAsWarnings": false
+    "tslint.alwaysShowRuleFailuresAsWarnings": false,
+    "atlascode.jira.lastCreateSiteAndProject": {
+        "siteId": "3d2e5ec2-04b6-45e2-b9e4-2ebe79d59e1c",
+        "projectKey": "AMPI"
+    }
 }
