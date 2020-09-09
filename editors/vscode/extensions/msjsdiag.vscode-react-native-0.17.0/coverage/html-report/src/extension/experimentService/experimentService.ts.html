@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src\extension\experimentService\experimentService.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/extension/experimentService/</a> experimentService.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/71</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/69</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for details.
+&nbsp;
+<span class="cstat-no" title="statement not covered" ></span>import * as Configstore from "configstore";
+<span class="cstat-no" title="statement not covered" ></span>import * as https from "https";
+<span class="cstat-no" title="statement not covered" ></span>import * as vscode from "vscode";
+import { IExperiment } from "./IExperiment";
+<span class="cstat-no" title="statement not covered" ></span>import { PromiseUtil } from "../../common/node/promise";
+<span class="cstat-no" title="statement not covered" ></span>import { TelemetryHelper } from "../../common/telemetryHelper";
+<span class="cstat-no" title="statement not covered" ></span>import { Telemetry } from "../../common/telemetry";
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span>export enum ExperimentStatuses </span>{
+<span class="cstat-no" title="statement not covered" ></span>    ENABLED = "enabled",
+<span class="cstat-no" title="statement not covered" ></span>    DISABLED = "disabled",
+<span class="cstat-no" title="statement not covered" ></span>    FAILED = "failed",
+}
+&nbsp;
+export interface ExperimentConfig {
+    experimentName: string;
+    popCoveragePercent: number;
+    enabled: boolean;
+}
+&nbsp;
+export interface ExperimentParameters extends ExperimentConfig {
+    [key: string]: any;
+    extensionId?: string;
+}
+&nbsp;
+export interface ExperimentResult {
+    resultStatus: ExperimentStatuses;
+    updatedExperimentParameters: ExperimentParameters;
+    error?: Error;
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" ></span>export class ExperimentService implements vscode.Disposable {
+    private static instance: ExperimentService;
+&nbsp;
+    private readonly endpointURL: string;
+    private readonly configName: string;
+    private config: Configstore;
+    private downloadedExperimentsConfig: Array&lt;ExperimentConfig&gt; | null;
+    private experimentsInstances: Map&lt;string, IExperiment&gt;;
+    private downloadConfigRequest: Promise&lt;ExperimentConfig[]&gt;;
+    private promiseUtil: PromiseUtil;
+    private cancellationTokenSource: vscode.CancellationTokenSource;
+&nbsp;
+    public <span class="fstat-no" title="function not covered" >static create </span>() {
+<span class="cstat-no" title="statement not covered" >        if (!ExperimentService.instance) {</span>
+<span class="cstat-no" title="statement not covered" ></span>            ExperimentService.instance = new ExperimentService();
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ></span>        return ExperimentService.instance;
+    }
+&nbsp;
+    public async <span class="fstat-no" title="function not covered" >runExperiments(</span>): Promise&lt;void&gt; {
+<span class="cstat-no" title="statement not covered" >        if (!this.downloadedExperimentsConfig) {</span>
+<span class="cstat-no" title="statement not covered" ></span>            this.downloadedExperimentsConfig = await this.downloadConfigRequest;
+<span class="cstat-no" title="statement not covered" ></span>            this.experimentsInstances = await this.initializeExperimentsInstances();
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ></span>        let experimentResults: Array&lt;ExperimentResult&gt; = await Promise.all(
+            t</span>his.downloadedExperimentsConfig.map(expConfig =&gt; <span class="cstat-no" title="statement not covered" >this.executeExperiment(expConfig))
+        );
+&nbsp;
+<span class="cstat-no" title="statement not covered" ></span>        this.sendExperimentTelemetry(experimentResults);
+    }
+&nbsp;
+    public <span class="fstat-no" title="function not covered" >dispose(</span>) {
+<span class="cstat-no" title="statement not covered" ></span>        this.cancellationTokenSource.cancel();
+<span class="cstat-no" title="statement not covered" ></span>        this.cancellationTokenSource.dispose();
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    private constructor() {</span>
+<span class="cstat-no" title="statement not covered" ></span>        this.endpointURL = "https://microsoft.github.io/vscode-react-native/experiments/experimentsConfig.json";
+<span class="cstat-no" title="statement not covered" ></span>        this.configName = "reactNativeToolsConfig";
+&nbsp;
+<span class="cstat-no" title="statement not covered" ></span>        this.promiseUtil = new PromiseUtil();
+<span class="cstat-no" title="statement not covered" ></span>        this.config = new Configstore(this.configName);
+<span class="cstat-no" title="statement not covered" ></span>        this.cancellationTokenSource = new vscode.CancellationTokenSource();
+<span class="cstat-no" title="statement not covered" ></span>        this.downloadedExperimentsConfig = null;
+&nbsp;
+<span class="cstat-no" title="statement not covered" ></span>        this.downloadConfigRequest = this.retryDownloadExperimentsConfig();
+    }
+&nbsp;
+    private async <span class="fstat-no" title="function not covered" >executeExperiment(expConfig: ExperimentConfig)</span>: Promise&lt;ExperimentResult&gt; {
+<span class="cstat-no" title="statement not covered" ></span>        let curExperimentParameters = this.config.get(expConfig.experimentName);
+<span class="cstat-no" title="statement not covered" ></span>        let expInstance = this.experimentsInstances.get(expConfig.experimentName);
+&nbsp;
+<span class="cstat-no" title="statement not covered" ></span>        let expResult: ExperimentResult;
+<span class="cstat-no" title="statement not covered" >        if (expInstance &amp;&amp; expConfig.enabled) {</span>
+<span class="cstat-no" title="statement not covered" >            try {</span>
+<span class="cstat-no" title="statement not covered" ></span>                expResult = await expInstance.run(expConfig, curExperimentParameters);
+<span class="cstat-no" title="statement not covered" ></span>                this.config.set(expConfig.experimentName, expResult.updatedExperimentParameters);
+            } catch (err) {
+<span class="cstat-no" title="statement not covered" ></span>                expResult = {
+                    resultStatus: ExperimentStatuses.FAILED,
+                    updatedExperimentParameters: expConfig,
+                    error: err,
+                };
+            }
+        } else {
+<span class="cstat-no" title="statement not covered" ></span>            expResult = {
+                resultStatus: ExperimentStatuses.DISABLED,
+                updatedExperimentParameters: expConfig,
+            };
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ></span>        return expResult;
+    }
+&nbsp;
+    private async <span class="fstat-no" title="function not covered" >retryDownloadExperimentsConfig(retryCount = 60)</span>: Promise&lt;ExperimentConfig[]&gt; {
+<span class="cstat-no" title="statement not covered" >        try {</span>
+<span class="cstat-no" title="statement not covered" ></span>            return await this.downloadExperimentsConfig();
+        } catch (err) {
+<span class="cstat-no" title="statement not covered" >            if (retryCount &lt; 1 || this.cancellationTokenSource.token.isCancellationRequested) {</span>
+<span class="cstat-no" title="statement not covered" ></span>                throw err;
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ></span>            await this.promiseUtil.delay(2000);
+<span class="cstat-no" title="statement not covered" ></span>            return await this.retryDownloadExperimentsConfig(--retryCount);
+        }
+    }
+&nbsp;
+    private async <span class="fstat-no" title="function not covered" >initializeExperimentsInstances(</span>): Promise&lt;Map&lt;string, IExperiment&gt;&gt; {
+<span class="cstat-no" title="statement not covered" ></span>        let expInstances = new Map&lt;string, IExperiment&gt;();
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (this.downloadedExperimentsConfig) {</span>
+<span class="cstat-no" title="statement not covered" >            for (let expConfig of this.downloadedExperimentsConfig) {</span>
+<span class="cstat-no" title="statement not covered" >                try {</span>
+<span class="cstat-no" title="statement not covered" ></span>                    let expClass = <span class="cstat-no" title="statement not covered" >await import(</span>`./experiments/${expConfig.experimentName}`);
+<span class="cstat-no" title="statement not covered" ></span>                    expInstances.set(
+                        expConfig.experimentName,
+                        new expClass.default()
+                    );
+                } catch (err) {
+<span class="cstat-no" title="statement not covered" ></span>                    expConfig.enabled = false;
+                }
+            }
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ></span>        return expInstances;
+    }
+&nbsp;
+    private <span class="fstat-no" title="function not covered" >downloadExperimentsConfig(</span>): Promise&lt;ExperimentConfig[]&gt; {
+<span class="cstat-no" title="statement not covered" ></span>        return new Promise&lt;ExperimentConfig[]&gt;((resolve, reject) =&gt; {
+<span class="cstat-no" title="statement not covered" ></span>            https.get(this.endpointURL, (response) =&gt; {
+<span class="cstat-no" title="statement not covered" ></span>                let data = "";
+<span class="cstat-no" title="statement not covered" ></span>                response.setEncoding("utf8");
+<span class="cstat-no" title="statement not covered" ></span>                r</span>esponse.on("data", (chunk: string) =&gt; (<span class="cstat-no" title="statement not covered" >data += chunk));
+<span class="cstat-no" title="statement not covered" ></span>                response.on("end", () =&gt; {
+<span class="cstat-no" title="statement not covered" >                    try {</span>
+<span class="cstat-no" title="statement not covered" ></span>                        resolve(JSON.parse(data));
+                    } catch (err) {
+<span class="cstat-no" title="statement not covered" ></span>                        reject(err);
+                    }
+                });
+<span class="cstat-no" title="statement not covered" ></span>                response.on("error", reject);
+            }).on("error", reject);
+        });
+    }
+&nbsp;
+    private <span class="fstat-no" title="function not covered" >sendExperimentTelemetry(experimentsResults: ExperimentResult[])</span>: void {
+<span class="cstat-no" title="statement not covered" ></span>        const runExperimentsEvent = TelemetryHelper.createTelemetryEvent("runExperiments");
+&nbsp;
+<span class="cstat-no" title="statement not covered" ></span>        experimentsResults.forEach(expResult =&gt; {
+<span class="cstat-no" title="statement not covered" >            if (</span>
+                expResult.resultStatus === ExperimentStatuses.FAILED
+                &amp;&amp; expResult.error
+            ) {
+<span class="cstat-no" title="statement not covered" ></span>                TelemetryHelper.addTelemetryEventErrorProperty(
+                    runExperimentsEvent,
+                    expResult.error,
+                    undefined,
+                    `${expResult.updatedExperimentParameters.experimentName}.`
+                );
+            } else {
+<span class="cstat-no" title="statement not covered" ></span>                TelemetryHelper.addTelemetryEventProperty(
+                    runExperimentsEvent,
+                    expResult.updatedExperimentParameters.experimentName,
+                    expResult.resultStatus,
+                    false
+                );
+            }
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" ></span>        Telemetry.send(runExperimentsEvent);
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Aug 04 2020 07:35:01 GMT+0000 (Greenwich Mean Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

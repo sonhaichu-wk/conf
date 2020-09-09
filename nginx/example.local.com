@@ -4,6 +4,11 @@ server {
     server_name .example.local.com;
     root "/var/www/html/example/public";
 
+    #gzip on;
+    #gzip_types      text/plain text/css text/html application/xml application/javascript;
+    #gzip_proxied    no-cache no-store private expired auth;
+    #gzip_min_length 1000;
+
     index index.html index.htm index.php;
 
     charset utf-8;
@@ -12,7 +17,9 @@ server {
         try_files $uri $uri/ /index.php?$query_string;
     }
 
-    
+    #location ~*  \.(jpg|jpeg|png|gif|ico|css|js|eot|otf|ttf|woff|woff2)$ {
+    #   expires 7d;
+    #}
 
     location = /favicon.ico { access_log off; log_not_found off; }
     location = /robots.txt  { access_log off; log_not_found off; }

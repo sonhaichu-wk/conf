@@ -1,0 +1,93 @@
+{
+	"name": "vscode-vue-component-importer",
+	"displayName": "Vue Component Importer",
+	"description": "Import vue components into a single file component by referencing the <template> block.",
+	"version": "0.1.0",
+	"author": "FullStackFlamingo",
+	"publisher": "FullStackFlamingo",
+	"icon": "asset/icondown.png",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/FullStackFlamingo/vscode-vue-component-importer.git"
+	},
+	"bugs": {
+		"url": "https://github.com/FullStackFlamingo/vscode-vue-component-importer/issues"
+	},
+	"homepage": "https://github.com/FullStackFlamingo/vscode-vue-component-importer",
+	"keywords": [
+		"Vue",
+		"vue",
+		"vuejs"
+	],
+	"engines": {
+		"vscode": "^1.48.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production",
+		"webpack": "webpack --mode production",
+		"test": "jest"
+	},
+	"main": "./dist/extension.js",
+	"activationEvents": [
+		"onCommand:extension.vue-component-importer.importFromCursor"
+	],
+	"contributes": {
+		"keybindings": [
+			{
+				"command": "extension.vue-component-importer.importFromCursor",
+				"key": "ctrl+i",
+				"mac": "cmd+i",
+				"when": "editorTextFocus && !editorReadOnly"
+			}
+		],
+		"commands": [
+			{
+				"command": "extension.vue-component-importer.importFromCursor",
+				"title": "Vue: Import vue component at cursor"
+			}
+		],
+		"configuration": {
+			"title": "Vue Component Importer",
+			"properties": {
+				"vue-component-importer.enableDebugMessages": {
+					"type": "boolean",
+					"default": false,
+					"description": "Show messages"
+				}
+			}
+		}
+	},
+	"devDependencies": {
+		"@babel/core": "^7.11.4",
+		"@babel/preset-env": "^7.11.0",
+		"@types/glob": "^7.1.3",
+		"@types/node": "^14.6.2",
+		"@types/vscode": "^1.48.0",
+		"babel-jest": "^26.3.0",
+		"eslint": "^7.7.0",
+		"eslint-config-airbnb": "^18.2.0",
+		"eslint-config-airbnb-base": "^14.2.0",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-import": "^2.22.0",
+		"eslint-plugin-jest": "^23.20.0",
+		"eslint-plugin-prettier": "^3.1.4",
+		"glob": "^7.1.6",
+		"jest": "^26.4.2",
+		"prettier": "^2.1.1",
+		"vscode-test": "^1.4.0",
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12"
+	},
+	"dependencies": {
+		"change-case": "^4.1.1"
+	},
+	"__metadata": {
+		"id": "bd556147-e525-414c-8db9-7bcb05dbe700",
+		"publisherId": "9a9e9f87-62f3-4d72-be6a-4204afda0a30",
+		"publisherDisplayName": "FullStackFlamingo"
+	}
+}
