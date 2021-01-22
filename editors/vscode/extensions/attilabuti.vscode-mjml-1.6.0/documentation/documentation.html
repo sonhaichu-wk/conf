@@ -1,0 +1,3377 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <style>body {font-family: "Segoe WPC","Segoe UI","SFUIText-Light","HelveticaNeue-Light",sans-serif,"Droid Sans Fallback";font-size: 14px;padding: 0 26px;line-height: 22px;word-wrap: break-word;}#code-csp-warning {position: fixed;top: 0;right: 0;color: white;margin: 16px;text-align: center;font-size: 12px;font-family: sans-serif;background-color:#444444;cursor: pointer;padding: 6px;box-shadow: 1px 1px 1px rgba(0,0,0,.25);}#code-csp-warning:hover {text-decoration: none;background-color:#007acc;box-shadow: 2px 2px 2px rgba(0,0,0,.25);}body.scrollBeyondLastLine {margin-bottom: calc(100vh - 22px);}body.showEditorSelection .code-line {position: relative;}body.showEditorSelection .code-active-line:before,body.showEditorSelection .code-line:hover:before {content: "";display: block;position: absolute;top: 0;left: -12px;height: 100%;}body.showEditorSelection li.code-active-line:before,body.showEditorSelection li.code-line:hover:before {left: -30px;}.vscode-light.showEditorSelection .code-active-line:before {border-left: 3px solid rgba(0,0,0,0.15);}.vscode-light.showEditorSelection .code-line:hover:before {border-left: 3px solid rgba(0,0,0,0.40);}.vscode-light.showEditorSelection .code-line .code-line:hover:before {border-left: none;}.vscode-dark.showEditorSelection .code-active-line:before {border-left: 3px solid rgba(255,255,255,0.4);}.vscode-dark.showEditorSelection .code-line:hover:before {border-left: 3px solid rgba(255,255,255,0.60);}.vscode-dark.showEditorSelection .code-line .code-line:hover:before {border-left: none;}.vscode-high-contrast.showEditorSelection .code-active-line:before {border-left: 3px solid rgba(255,160,0,0.7);}.vscode-high-contrast.showEditorSelection .code-line:hover:before {border-left: 3px solid rgba(255,160,0,1);}.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {border-left: none;}img {max-width: 100%;max-height: 100%;}a {text-decoration: none;}a:hover {text-decoration: underline;}a:focus,input:focus,select:focus,textarea:focus {outline: 1px solid -webkit-focus-ring-color;outline-offset: -1px;}hr {border: 0;height: 2px;border-bottom: 2px solid;}h1 {padding-bottom: 0.3em;line-height: 1.2;border-bottom-width: 1px;border-bottom-style: solid;}h1,h2,h3 {font-weight: normal;}h1 code,h2 code,h3 code,h4 code,h5 code,h6 code {font-size: inherit;line-height: auto;}table {border-collapse: collapse;}table > thead > tr > th {text-align: left;border-bottom: 1px solid;}table > thead > tr > th,table > thead > tr > td,table > tbody > tr > th,table > tbody > tr > td {padding: 5px 10px;}table > tbody > tr + tr > td {border-top: 1px solid;}blockquote {margin: 0 7px 0 5px;padding: 0 16px 0 10px;border-left-width: 5px;border-left-style: solid;}code {font-family: Menlo,Monaco,Consolas,"Droid Sans Mono","Courier New",monospace,"Droid Sans Fallback";font-size: 14px;line-height: 19px;}body.wordWrap pre {white-space: pre-wrap;}.mac code {font-size: 12px;line-height: 18px;}pre:not(.hljs),pre.hljs code > div {padding: 16px;border-radius: 3px;overflow: auto;}pre code {color: var(--vscode-editor-foreground);}.vscode-light pre {background-color: rgba(220,220,220,0.4);}.vscode-dark pre {background-color: rgba(10,10,10,0.4);}.vscode-high-contrast pre {background-color: rgb(0,0,0);}.vscode-high-contrast h1 {border-color: rgb(0,0,0);}.vscode-light table > thead > tr > th {border-color: rgba(0,0,0,0.69);}.vscode-dark table > thead > tr > th {border-color: rgba(255,255,255,0.69);}.vscode-light h1,.vscode-light hr,.vscode-light table > tbody > tr + tr > td {border-color: rgba(0,0,0,0.18);}.vscode-dark h1,.vscode-dark hr,.vscode-dark table > tbody > tr + tr > td {border-color: rgba(255,255,255,0.18);}.hljs-keyword,.hljs-literal,.hljs-symbol,.hljs-name {color: #569CD6;}.hljs-link {color: #569CD6;text-decoration: underline;}.hljs-built_in,.hljs-type {color: #4EC9B0;}.hljs-number,.hljs-class {color: #B8D7A3;}.hljs-string,.hljs-meta-string {color: #D69D85;}.hljs-regexp,.hljs-template-tag {color: #9A5334;}.hljs-subst,.hljs-function,.hljs-title,.hljs-params,.hljs-formula {color: #DCDCDC;}.hljs-comment,.hljs-quote {color: #57A64A;font-style: italic;}.hljs-doctag {color: #608B4E;}.hljs-meta,.hljs-meta-keyword,.hljs-tag {color: #9B9B9B;}.hljs-variable,.hljs-template-variable {color: #BD63C5;}.hljs-attr,.hljs-attribute,.hljs-builtin-name {color: #9CDCFE;}.hljs-section {color: gold;}.hljs-emphasis {font-style: italic;}.hljs-strong {font-weight: bold;}.hljs-bullet,.hljs-selector-tag,.hljs-selector-id,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo {color: #D7BA7D;}.hljs-addition {background-color: var(--vscode-diffEditor-insertedTextBackground,rgba(155,185,85,0.2));color: rgb(155,185,85);display: inline-block;width: 100%;}.hljs-deletion {background: var(--vscode-diffEditor-removedTextBackground,rgba(255,0,0,0.2));color: rgb(255,0,0);display: inline-block;width: 100%;}.vscode-light .hljs-function,.vscode-light .hljs-params {color: inherit;}.vscode-light .hljs-comment,.vscode-light .hljs-quote,.vscode-light .hljs-variable {color: #008000;}.vscode-light .hljs-keyword,.vscode-light .hljs-selector-tag,.vscode-light .hljs-built_in,.vscode-light .hljs-name,.vscode-light .hljs-tag {color: #00f;}.vscode-light .hljs-string,.vscode-light .hljs-title,.vscode-light .hljs-section,.vscode-light .hljs-attribute,.vscode-light .hljs-literal,.vscode-light .hljs-template-tag,.vscode-light .hljs-template-variable,.vscode-light .hljs-type {color: #a31515;}.vscode-light .hljs-selector-attr,.vscode-light .hljs-selector-pseudo,.vscode-light .hljs-meta {color: #2b91af;}.vscode-light .hljs-doctag {color: #808080;}.vscode-light .hljs-attr {color: #f00;}.vscode-light .hljs-symbol,.vscode-light .hljs-bullet,.vscode-light .hljs-link {color: #00b0e8;}.vscode-light .hljs-emphasis {font-style: italic;}.vscode-light .hljs-strong {font-weight: bold;}</style>
+        <script>
+            const vscode = acquireVsCodeApi();
+
+            function openExample(data) {
+                vscode.postMessage({
+                    command: "openExample",
+                    data: data
+                });
+            }
+
+            window.addEventListener("message", event => {
+                let message = event.data;
+
+                if (message.command == "scrollTo") {
+                    location.hash = message.anchor;
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <h1 id="mjml-guides">MJML Guides</h1>
+<p>MJML is a markup language designed to reduce the pain of coding a responsive email. Its semantic syntax makes it easy and straightforward and its rich standard components library speeds up your development time and lightens your email codebase. MJML’s open-source engine generates high quality responsive HTML compliant with best practices.</p>
+<h2 id="overview">Overview</h2>
+<p>MJML rolls up all of what Mailjet has learned about HTML email design over the past few years and abstracts the whole layer of complexity related to responsive email design.</p>
+<p>Get your speed and productivity boosted with MJML’s semantic syntax. Say goodbye to endless HTML table nesting or email client specific CSS. Building a responsive email is super easy with tags such as <code>&lt;mj-section&gt;</code> and <code>&lt;mj-column&gt;</code>.</p>
+<p>MJML has been designed with responsiveness in mind. The abstraction it offers guarantee you to always be up-to-date with the industry practices and responsive. Email clients update their specs and requirements regularly, but we geek about that stuff - we’ll stay on top of it so you can spend less time reading up on latest email client updates and more time designing beautiful email.</p>
+<pre><code class="language-html"><div>
+<span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span>&gt;</span>Hi sexy!<span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+
+</div></code></pre>
+<p align="center">
+  <br /><a href="javascript:void(0)" onclick="openExample('intro')" title="intro"><img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" /></a>
+</p>
+<h2 id="mjml">mjml</h2>
+<p>A MJML document starts with a <code>&lt;mjml&gt;</code> tag, it can contain only <code>mj-head</code> and <code>mj-body</code> tags. Both have the same purpose of <code>head</code> and <code>body</code> in a HTML document.</p>
+<h2 id="mj-head">mj-head</h2>
+<p>mj-head contains everything related to the document such as style and meta elements. It supports custom head elements and can be registered through <code>registerMJHeadElement(&lt;string&gt; name, &lt;function&gt; handler)</code> api from <code>mjml-core</code>, it acts as a pre-render hook.</p>
+<h2 id="mj-body">mj-body</h2>
+<p>mj-body contains everything related to the content of your email. It supports custom elements too and can be registered either through <code>registerMJElement(&lt;MJMLElement&gt; class)</code> api from <code>mjml-core</code> or via a <code>.mjmlconfig</code> file. Non-known element from <code>mjml-core</code> are simply ignored. Note that <code>mj-body</code> should have only one root element due to how React works.</p>
+<h2 id="mj-include">mj-include</h2>
+<p>The mjml-core package allows you to include external mjml files to build your email template.</p>
+<pre><code class="language-xml"><div><span class="hljs-comment">&lt;!-- header.mjml --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span>&gt;</span>This is a header<span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+</div></code></pre>
+<p>You can wrap your external mjml files inside the default <code>mjml &gt; mj-body</code>
+tags to make it easier to preview outside the main template</p>
+<pre><code class="language-xml"><div><span class="hljs-comment">&lt;!-- main.mjml --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-include</span> <span class="hljs-attr">path</span>=<span class="hljs-string">"./header"</span> /&gt;</span> <span class="hljs-comment">&lt;!-- or 'header.mjml' --&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p>The MJML engine will then replace your included files before starting the rendering process</p>
+<aside class="notice">
+Note that the file must be a file with a `.mjml` extension
+</aside>
+<h1 id="getting-started">Getting Started</h1>
+<p>This is a responsive email</p>
+<p align="center">
+  <img width="300px" src="{{root}}/images/322b2c8c-c9bb-11e5-98b9-942f6ea4d585.png" alt="layout">
+</p>
+<p>Like a regular HTML template, we can split this one into different parts to fit in a grid.</p>
+<p>The body of your email, represented by the <code>mj-body</code> tag contains the entire content of your document:</p>
+<p align="center">
+  <img width="300px" src="{{root}}/images/1fd499c4-c9bb-11e5-828f-e0e6e18180b8.png" alt="body">
+</p>
+<p>From here, you can first define your sections:</p>
+<p align="center">
+  <img width="300px" src="{{root}}/images/1fd191b6-c9bb-11e5-9450-cc15acec72b4.png" alt="sections">
+</p>
+<p>Inside any section, there should be columns (even if you need only one column). Columns are what makes MJML responsive.</p>
+<p align="center">
+  <img width="300px" src="{{root}}/images/1fd112d6-c9bb-11e5-97e7-d9c93c743c4d.png" alt="columns">
+</p>
+<p>Below, you'll find some basic rules of MJML to keep in mind for later. We'll remind them when useful but better start learning them early on.</p>
+<h2 id="column-sizing">Column sizing</h2>
+<h3 id="auto-sizing">Auto sizing</h3>
+<p>The default behavior of the MJML translation engine is to divide the section space (600px by default, but it can be changed with the <code>width</code> attribute on <code>mj-body</code>) in as many columns as you declare.</p>
+<aside class="warning">
+  Any mj-element included in a column will have a width equivalent to 100% of this column's width.
+</aside>
+<p>Let's take the following layout to illustrate this:</p>
+<pre><code class="language-html"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- First column content --&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- Second column content --&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p>Since the first section defines only 2 columns, the engine will translate that in a layout where each column takes 50% of the total space (300px each). If we add a third one, it goes down to 33%, and with a fourth one to 25%.</p>
+<h3 id="manual-sizing">Manual sizing</h3>
+<p>You can also manually set the size of your columns, in pixels or percentage, by using the <code>width</code> attribute on <code>mj-column</code>.</p>
+<p>Let's take the following layout to illustrate this:</p>
+<pre><code class="language-html"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"200px"</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- First column content --&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"400px"</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- Second column content --&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<h2 id="nesting">Nesting</h2>
+<pre><code class="language-html"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- Column content --&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<h1 id="basic-layout-example">Basic layout example</h1>
+<p>In this section, you're going to learn how to code a basic email template using MJML.</p>
+<p>Here is the final render we want to end with:</p>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('templates-hello-world')" title="templates-hello-world"><img width="350px" src="{{root}}/images/d9c20556-ca6a-11e5-9007-d40ac89c5088.png" alt="sexy"></a>
+</p>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('templates-basic')" title="templates-basic"><img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" /></a>
+</p>
+<p>Looks cool, right?</p>
+<h2 id="sections">Sections</h2>
+<pre><code class="language-html"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Company Header --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#f0f0f0"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Image Header --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#f0f0f0"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Introduction Text --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#fafafa"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- 2 columns section --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"white"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Icons --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#fbfbfb"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Social icons --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#f0f0f0"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p>First, we will implement the skeleton which are the sections. Here, our email is going to be divided into 6 sections.</p>
+<h2 id="company-header">Company Header</h2>
+<pre><code class="language-html"><div>
+<span class="hljs-comment">&lt;!-- Company Header --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#f0f0f0"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span>  <span class="hljs-attr">font-style</span>=<span class="hljs-string">"italic"</span>
+              <span class="hljs-attr">font-size</span>=<span class="hljs-string">"20px"</span>
+              <span class="hljs-attr">color</span>=<span class="hljs-string">"#626262"</span>&gt;</span>
+      My Company
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+
+</div></code></pre>
+<p>The first section of the email consists in a centered banner, containing only the company name. The following markup is the MJML representation of the layout we want to obtain.</p>
+<aside class="notice">
+Remember everything has to be contained in one column.
+</aside>
+The text padding represents the inner space around the content within the `mj-text` element.
+<h2 id="image-header">Image Header</h2>
+<pre><code class="language-html"><div>
+<span class="hljs-comment">&lt;!-- Image Header --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span> <span class="hljs-attr">background-url</span>=<span class="hljs-string">"http://1.bp.blogspot.com/-TPrfhxbYpDY/Uh3Refzk02I/AAAAAAAALw8/5sUJ0UUGYuw/s1600/New+York+in+The+1960's+-+70's+(2).jpg"</span>
+              <span class="hljs-attr">background-size</span>=<span class="hljs-string">"cover"</span>
+              <span class="hljs-attr">background-repeat</span>=<span class="hljs-string">"no-repeat"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"600"</span>&gt;</span>
+
+		  <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span>  <span class="hljs-attr">align</span>=<span class="hljs-string">"center"</span>
+                <span class="hljs-attr">color</span>=<span class="hljs-string">"#fff"</span>
+                <span class="hljs-attr">font-size</span>=<span class="hljs-string">"40px"</span>
+                <span class="hljs-attr">font-family</span>=<span class="hljs-string">"Helvetica Neue"</span>&gt;</span>Slogan here<span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-button</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#F63A4D"</span>
+                 <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+      	Promotion
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-button</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+
+</div></code></pre>
+<p>Next comes a section with a background image and a block of text (representing the company slogan) and a button pointing to a page listing all the company promotions.</p>
+<p>To add the image header, you will have to replace the section's background-color by a background-url.
+Similarly to the first header, you will have to center the text both vertically and horizontally.
+The padding remains the same.
+The button <code>href</code> sets the button location.
+In order to have the background rendered full-width in the column, set the column width to 600px with <code>width=&quot;600&quot;</code>.</p>
+<h2 id="introduction-text">Introduction Text</h2>
+<pre><code class="language-html"><div>
+<span class="hljs-comment">&lt;!-- Intro text --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#fafafa"</span>&gt;</span>
+    	<span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"400"</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span> <span class="hljs-attr">font-style</span>=<span class="hljs-string">"italic"</span>
+                   <span class="hljs-attr">font-size</span>=<span class="hljs-string">"20px"</span>
+                   <span class="hljs-attr">font-family</span>=<span class="hljs-string">"Helvetica Neue"</span>
+                   <span class="hljs-attr">color</span>=<span class="hljs-string">"#626262"</span>&gt;</span>My Awesome Text<span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+
+      		<span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"#525252"</span>&gt;</span>
+          		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum enim eget magna efficitur, eu semper augue semper. Aliquam erat volutpat. Cras id dui lectus. Vestibulum sed finibus lectus, sit amet suscipit nibh. Proin nec commodo purus. Sed eget nulla elit. Nulla aliquet mollis faucibus.
+          <span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+
+        	<span class="hljs-tag">&lt;<span class="hljs-name">mj-button</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#F45E43"</span>
+                     <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Learn more<span class="hljs-tag">&lt;/<span class="hljs-name">mj-button</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+
+</div></code></pre>
+<p>The introduction text will consist of a title, a main text and a button.
+The title is a regular <code>mj-text</code> that can be customized.</p>
+<h2 id="2-columns-section">2 Columns Section</h2>
+<pre><code class="language-html"><div>
+<span class="hljs-comment">&lt;!-- Side image --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"white"</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Left image --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-image</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"200"</span>
+              <span class="hljs-attr">src</span>=<span class="hljs-string">"{{root}}/images/sciolino-paris-bw.jpg"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- right paragraph --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span> <span class="hljs-attr">font-style</span>=<span class="hljs-string">"italic"</span>
+             <span class="hljs-attr">font-size</span>=<span class="hljs-string">"20px"</span>
+             <span class="hljs-attr">font-family</span>=<span class="hljs-string">"Helvetica Neue"</span>
+             <span class="hljs-attr">color</span>=<span class="hljs-string">"#626262"</span>&gt;</span>
+        Find amazing places
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"#525252"</span>&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum enim eget magna efficitur, eu semper augue semper. Aliquam erat volutpat. Cras id dui lectus. Vestibulum sed finibus lectus.<span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+
+</div></code></pre>
+<p>This sections is made up of 2 columns. One containing an image, the other one containing a text.
+For the image part, note that when a tag does not have any child, you can use the XML self-closing tag syntax:
+<code>&lt;mj-image /&gt;</code></p>
+<p>For the text part, you are going to need two <code>&lt;mj-text&gt;</code>s like above. One with a title format, and the other one as a regular text.</p>
+<h2 id="icons">Icons</h2>
+<pre><code class="language-html"><div><span class="hljs-comment">&lt;!-- Icons --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#fbfbfb"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-image</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{root}}/images/x0l.png"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-image</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{root}}/images/x01.png"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-image</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{root}}/images/x0s.png"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+</div></code></pre>
+<p>This section is a 3-columns-based section. Please notice you can make the padding vary to change the space around the images.</p>
+<h1 id="components">Components</h1>
+<p>Components are the core of MJML. A component is an abstraction of a more complex email-responsive HTML layout. It exposes attributes, enabling you to interact with the final component visual aspect.</p>
+<p>MJML comes out of the box with a set of standard components to help you build easily your first templates without having to reinvent the wheel.</p>
+<p>For instance, the <code>mj-button</code> components is, on the inside, a complex HTML layout:</p>
+<pre><code class="language-html"><div>
+<span class="hljs-comment">&lt;!-- MJML --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mj-button</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+    Hello There!
+<span class="hljs-tag">&lt;/<span class="hljs-name">mj-button</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- HTML --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">cellpadding</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">cellspacing</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"border:none;border-radius:3px;"</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"center"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-color:#414141;border-radius:3px;color:#ffffff;cursor:auto;"</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"center"</span> <span class="hljs-attr">valign</span>=<span class="hljs-string">"middle"</span> <span class="hljs-attr">bgcolor</span>=<span class="hljs-string">"#414141"</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mj-content"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display:inline-block;text-decoration:none;background-color:#414141;border:1px solid #414141;border-radius:3px;color:#ffffff;font-size:13px;font-weight:bold;padding:15px 30px;"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>
+					Hello There!
+				<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</div></code></pre>
+<h1 id="standard-head-components">Standard Head components</h1>
+<p>Head components ease your development process, enabling you to import fonts, define default styles or create classes for MJML components among others.</p>
+<h2 id="mjml-attributes">mjml-attributes</h2>
+<p>This tag allows you to modify default attributes on a <code>mj-tag</code> and add <code>mj-class</code> to them.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">mj-head</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">mj-attributes</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span> <span class="hljs-attr">padding</span>=<span class="hljs-string">"0"</span> /&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">mj-class</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"blue"</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"blue"</span> /&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">mj-class</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"big"</span> <span class="hljs-attr">font-size</span>=<span class="hljs-string">"20px"</span> /&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">mj-all</span> <span class="hljs-attr">font-family</span>=<span class="hljs-string">"Arial"</span> /&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">mj-attributes</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">mj-head</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span> <span class="hljs-attr">mj-class</span>=<span class="hljs-string">"blue big"</span>&gt;</span>
+         Hello World!
+       <span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-head-attributes')" title="head-attributes">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<aside class="notice">
+  You can use mj-all to set default attributes for every components inside your MJML document
+</aside>
+<aside class="notice">
+  Note that the apply order of attributes is: inline attributes, then classes, then default mj-attributes and then defaultMJMLDefinition
+</aside>
+<h2 id="mjml-breakpoint">mjml-breakpoint</h2>
+<p>This tag allows you to control on which breakpoint the layout should go desktop/mobile.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-breakpoint</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"320px"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span>&gt;</span>
+          Hello World!
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-head-font')" title="head-font">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>width</td>
+<td>px</td>
+<td>breakpoint's value</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mjml-font">mjml-font</h2>
+<p>This tag allows you to import fonts if used in your MJML document</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-font</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Raleway"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/css?family=Raleway"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span> <span class="hljs-attr">font-family</span>=<span class="hljs-string">"Raleway, Arial"</span>&gt;</span>
+          Hello World!
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-head-font')" title="head-font">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>href</td>
+<td>string</td>
+<td>url of the font</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>name of the font</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mjml-preview">mjml-preview</h2>
+<p>This tag allows you to set the preview that will be displayed in the inbox of the recipient.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">mj-head</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">mj-preview</span>&gt;</span>Hello MJML<span class="hljs-tag">&lt;/<span class="hljs-name">mj-preview</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">mj-head</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span>&gt;</span>
+         Hello World!           
+       <span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-head-preview')" title="head-preview">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<p><code>mj-preview</code> doesn't support any attribute.</p>
+<h2 id="mjml-style">mjml-style</h2>
+<p>This tag allows you to set CSS styles that will be applied to the <b>HTML</b> in your MJML document as well as the HTML outputted. The CSS styles will be added to the head of the rendered HTML by default, but can also be inlined by using the <code>inline=&quot;inline&quot;</code> attribute.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mj-head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-style</span>&gt;</span>
+    @media all and (max-width: 480px) {
+      div[style*="color:#F45e46;"] {
+        text-align: center !important
+      }
+    }
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-style</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-style</span> <span class="hljs-attr">inline</span>=<span class="hljs-string">"inline"</span>&gt;</span>
+    .link-nostyle {
+      color: inherit;
+      text-decoration: none
+    }
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mj-head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span> &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-image</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{root}}/images/logo-small.png"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mj-image</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-divider</span> <span class="hljs-attr">border-color</span>=<span class="hljs-string">"#F45E43"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mj-divider</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span> <span class="hljs-attr">font-size</span>=<span class="hljs-string">"20px"</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"#F45e46"</span> <span class="hljs-attr">font-family</span>=<span class="hljs-string">"helvetica"</span>&gt;</span>
+        Hello <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://mjml.io"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link-nostyle"</span>&gt;</span>World<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+  <p align="center">
+    <a href="javascript:void(0)" onclick="openExample('components-head-style')" title="head-style">
+      <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+    </a>
+  </p>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>inline</td>
+<td>string</td>
+<td>set to &quot;inline&quot; to inline styles</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mjml-title">mjml-title</h2>
+<p>This tag allows you to set the title of an MJML document</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">mj-head</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">mj-title</span>&gt;</span>Hello MJML<span class="hljs-tag">&lt;/<span class="hljs-name">mj-title</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">mj-head</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span>&gt;</span>
+         Hello World!
+       <span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-head-title')" title="head-title">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<h1 id="standard-body-components">Standard Body components</h1>
+<p>MJML comes out of the box with a set of standard components to help you build easily your first templates without having to reinvent the wheel.</p>
+<h2 id="mjml-accordion">mjml-accordion</h2>
+<p align="center">
+  <img src="{{root}}/images/C4S9MVc.gif" alt="accordion" />
+</p>
+<p><code>mjml-accordion</code> is an interactive MJML component to stack content in tabs, so the information is collapsed and only the titles are visible. Readers can interact by clicking on the tabs to reveal the content, providing a great experience on mobile devices where space is scarce.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-attributes</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-accordion</span> <span class="hljs-attr">border</span>=<span class="hljs-string">"none"</span> <span class="hljs-attr">padding</span>=<span class="hljs-string">"1px"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-accordion-element</span> <span class="hljs-attr">icon-wrapped-url</span>=<span class="hljs-string">"http://i.imgur.com/Xvw0vjq.png"</span> <span class="hljs-attr">icon-unwrapped-url</span>=<span class="hljs-string">"http://i.imgur.com/KKHenWa.png"</span> <span class="hljs-attr">icon-height</span>=<span class="hljs-string">"24px"</span> <span class="hljs-attr">icon-width</span>=<span class="hljs-string">"24px"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-accordion-title</span> <span class="hljs-attr">font-family</span>=<span class="hljs-string">"Roboto, Open Sans, Helvetica, Arial, sans-serif"</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#fff"</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"#031017"</span> <span class="hljs-attr">padding</span>=<span class="hljs-string">"15px"</span> <span class="hljs-attr">font-size</span>=<span class="hljs-string">"18px"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-accordion-text</span> <span class="hljs-attr">font-family</span>=<span class="hljs-string">"Open Sans, Helvetica, Arial, sans-serif"</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#fafafa"</span> <span class="hljs-attr">padding</span>=<span class="hljs-string">"15px"</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"#505050"</span> <span class="hljs-attr">font-size</span>=<span class="hljs-string">"14px"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-attributes</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-head</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span> <span class="hljs-attr">padding</span>=<span class="hljs-string">"20px"</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#ffffff"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#dededd"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mj-accordion</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mj-accordion-element</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">mj-accordion-title</span>&gt;</span>Why use an accordion?<span class="hljs-tag">&lt;/<span class="hljs-name">mj-accordion-title</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">mj-accordion-text</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"line-height:20px"</span>&gt;</span>
+                Because emails with a lot of content are most of the time a very bad experience on mobile, mj-accordion comes handy when you want to deliver a lot of information in a concise way.
+              <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">mj-accordion-text</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">mj-accordion-element</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mj-accordion-element</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">mj-accordion-title</span>&gt;</span>How it works<span class="hljs-tag">&lt;/<span class="hljs-name">mj-accordion-title</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">mj-accordion-text</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"line-height:20px"</span>&gt;</span>
+                Content is stacked into tabs and users can expand them at will. If responsive styles are not supported (mostly on desktop clients), tabs are then expanded and your content is readable at once.
+              <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">mj-accordion-text</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">mj-accordion-element</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mj-accordion</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-accordion')" title="accordion">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="sexy" />
+  </a>
+</p>
+<aside class="notice">
+Every attribute in `mj-accordion` are applied to `mj-accordion-element` unless you overide them on `mj-accordion-element`
+</aside>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>css-class</td>
+<td>string</td>
+<td>class name, added to the root HTML element created</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>container-background-color</td>
+<td>n/a</td>
+<td>background-color of the cell</td>
+<td>n/a,</td>
+</tr>
+<tr>
+<td>border</td>
+<td>n/a</td>
+<td>border</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>n/a</td>
+<td>font</td>
+<td>Ubuntu, Helvetica, Arial, sans-serif</td>
+</tr>
+<tr>
+<td>icon-align</td>
+<td>n/a</td>
+<td>icon alignment</td>
+<td>middle</td>
+</tr>
+<tr>
+<td>icon-wrapped-url</td>
+<td>n/a</td>
+<td>icon when accordion is wrapped</td>
+<td>http://i.imgur.com/bIXv1bk.png</td>
+</tr>
+<tr>
+<td>icon-wrapped-alt</td>
+<td>n/a</td>
+<td>alt text when accordion is wrapped</td>
+<td>+</td>
+</tr>
+<tr>
+<td>icon-unwrapped-url</td>
+<td>n/a</td>
+<td>icon when accordion is unwrapped</td>
+<td>http://i.imgur.com/w4uTygT.png</td>
+</tr>
+<tr>
+<td>icon-unwrapped-alt</td>
+<td>n/a</td>
+<td>alt text when accordion is unwrapped</td>
+<td>-</td>
+</tr>
+<tr>
+<td>icon-position</td>
+<td>n/a</td>
+<td>display icon left or right</td>
+<td>right</td>
+</tr>
+<tr>
+<td>icon-height</td>
+<td>px</td>
+<td>icon width</td>
+<td>32px</td>
+</tr>
+<tr>
+<td>icon-width</td>
+<td>px</td>
+<td>icon height</td>
+<td>32px</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>px</td>
+<td>padding bottom</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>px</td>
+<td>padding left</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>px</td>
+<td>padding right</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>px</td>
+<td>padding top</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>px</td>
+<td>padding</td>
+<td>10px 25px</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mjml-accordion-element">mjml-accordion-element</h3>
+<p>This component enables you to create a accordion pane</p>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>background-color</td>
+<td>n/a</td>
+<td>background color</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>n/a</td>
+<td>font</td>
+<td>Ubuntu, Helvetica, Arial, sans-serif</td>
+</tr>
+<tr>
+<td>icon-align</td>
+<td>n/a</td>
+<td>icon alignment</td>
+<td>middle</td>
+</tr>
+<tr>
+<td>icon-wrapped-url</td>
+<td>n/a</td>
+<td>icon when accordion is wrapped</td>
+<td>http://i.imgur.com/bIXv1bk.png</td>
+</tr>
+<tr>
+<td>icon-wrapped-alt</td>
+<td>n/a</td>
+<td>alt text when accordion is wrapped</td>
+<td>+</td>
+</tr>
+<tr>
+<td>icon-unwrapped-url</td>
+<td>n/a</td>
+<td>icon when accordion is unwrapped</td>
+<td>http://i.imgur.com/w4uTygT.png</td>
+</tr>
+<tr>
+<td>icon-unwrapped-alt</td>
+<td>n/a</td>
+<td>alt text when accordion is unwrapped</td>
+<td>-</td>
+</tr>
+<tr>
+<td>icon-position</td>
+<td>n/a</td>
+<td>display icon left or right</td>
+<td>right</td>
+</tr>
+<tr>
+<td>icon-height</td>
+<td>n/a</td>
+<td>icon width</td>
+<td>32px</td>
+</tr>
+<tr>
+<td>icon-width</td>
+<td>n/a</td>
+<td>icon height</td>
+<td>32px</td>
+</tr>
+<tr>
+<td>css-class</td>
+<td>string</td>
+<td>class name, added to the root HTML element created</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mjml-accordion-title">mjml-accordion-title</h3>
+<p>This component enables you to add and style a title to your accordion</p>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>background-color</td>
+<td>n/a</td>
+<td>background color</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>color</td>
+<td>n/a</td>
+<td>text color</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>n/a</td>
+<td>font family</td>
+<td>Ubuntu, Helvetica, Arial, sans-serif</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>px</td>
+<td>font size</td>
+<td>13px</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>px</td>
+<td>padding bottom</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>px</td>
+<td>padding left</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>px</td>
+<td>padding right</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>px</td>
+<td>padding top</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>px</td>
+<td>padding</td>
+<td>16px</td>
+</tr>
+<tr>
+<td>css-class</td>
+<td>string</td>
+<td>class name, added to the root HTML element created</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mjml-accordion-text">mjml-accordion-text</h3>
+<p>This component enables you to add and style a text to your accordion</p>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>background-color</td>
+<td>n/a</td>
+<td>background color</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>color</td>
+<td>n/a</td>
+<td>text color</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>n/a</td>
+<td>font family</td>
+<td>Ubuntu, Helvetica, Arial, sans-serif</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>px</td>
+<td>font size</td>
+<td>13px</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>px</td>
+<td>padding bottom</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>px</td>
+<td>padding left</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>px</td>
+<td>padding right</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>px</td>
+<td>padding top</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>px</td>
+<td>padding</td>
+<td>16px</td>
+</tr>
+<tr>
+<td>css-class</td>
+<td>string</td>
+<td>class name, added to the root HTML element created</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mjml-body">mjml-body</h2>
+<p>This is the starting point of your email.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Your email goes here --&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a target="_blank" href="javascript:void(0)" onclick="openExample('components-body')" title="body">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<aside class="notice">
+  mj-body replaces the couple mj-body and mj-container of MJML v3.
+</aside>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>width</td>
+<td>px</td>
+<td>email's width</td>
+<td>600px</td>
+</tr>
+<tr>
+<td>background-color</td>
+<td>color formats</td>
+<td>the general background color</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>css-class</td>
+<td>string</td>
+<td>class name, added to the root HTML element created</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mjml-button">mjml-button</h2>
+<p align="center">
+  <img src="{{root}}/images/fd993192-c9bc-11e5-8c91-37d616bf5874.png" alt="desktop" width="150px" />
+</p>
+<p>Displays a customizable button.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mj-button</span> <span class="hljs-attr">font-family</span>=<span class="hljs-string">"Helvetica"</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#f45e43"</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"white"</span>&gt;</span>
+          Don't click me!
+         <span class="hljs-tag">&lt;/<span class="hljs-name">mj-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-button')" title="button">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>background-color</td>
+<td>color</td>
+<td>button background-color</td>
+<td>#414141</td>
+</tr>
+<tr>
+<td>container-background-color</td>
+<td>color</td>
+<td>button container background color</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border</td>
+<td>string</td>
+<td>css border format</td>
+<td>none</td>
+</tr>
+<tr>
+<td>border-bottom</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-left</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-right</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-top</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-radius</td>
+<td>px</td>
+<td>border radius</td>
+<td>3px</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>string</td>
+<td>normal/italic/oblique</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>px</td>
+<td>text size</td>
+<td>13px</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>number</td>
+<td>text thickness</td>
+<td>normal</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>string</td>
+<td>font name</td>
+<td>Ubuntu, Helvetica, Arial, sans-serif</td>
+</tr>
+<tr>
+<td>color</td>
+<td>color</td>
+<td>text color</td>
+<td>#ffffff</td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>string</td>
+<td>text-align button content</td>
+<td>none</td>
+</tr>
+<tr>
+<td>text-decoration</td>
+<td>string</td>
+<td>underline/overline/none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>text-transform</td>
+<td>string</td>
+<td>capitalize/uppercase/lowercase</td>
+<td>none</td>
+</tr>
+<tr>
+<td>align</td>
+<td>string</td>
+<td>horizontal alignment</td>
+<td>center</td>
+</tr>
+<tr>
+<td>vertical-align</td>
+<td>string</td>
+<td>vertical alignment</td>
+<td>middle</td>
+</tr>
+<tr>
+<td>line-height</td>
+<td>px/%/none</td>
+<td>line-height on link</td>
+<td>120%</td>
+</tr>
+<tr>
+<td>href</td>
+<td>link</td>
+<td>link to be triggered when the button is clicked</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>rel</td>
+<td>string</td>
+<td>specify the rel attribute for the button link</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>target</td>
+<td>string</td>
+<td>specify the target attribute for the button link</td>
+<td>_blank</td>
+</tr>
+<tr>
+<td>inner-padding</td>
+<td>px</td>
+<td>inner button padding</td>
+<td>10px 25px</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>px</td>
+<td>supports up to 4 parameters</td>
+<td>10px 25px</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>px</td>
+<td>top offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>px</td>
+<td>bottom offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>px</td>
+<td>left offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>px</td>
+<td>right offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>width</td>
+<td>px</td>
+<td>button width</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>height</td>
+<td>px</td>
+<td>button height</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>css-class</td>
+<td>string</td>
+<td>class name, added to the root HTML element created</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mjml-carousel">mjml-carousel</h2>
+<p align="center">
+  <img src="{{root}}/images/wHqIzgd.gif" alt="desktop" />
+</p>
+<p><code>mjml-carousel</code> displays a gallery of images or &quot;carousel&quot;. Readers can interact by hovering and clicking on thumbnails depending on the email client they use.</p>
+<p>This component enables you to set the styles of the carousel elements.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mj-carousel</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mj-carousel-image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{root}}/images/ecommerce-guide.jpg"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mj-carousel-image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{root}}/images/3@1x.png"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mj-carousel-image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{root}}/images/1@1x.png"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mj-carousel</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-carousel')" title="carousel">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="sexy" />
+  </a>
+</p>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>align</td>
+<td>string</td>
+<td>horizontal alignment</td>
+<td>center</td>
+</tr>
+<tr>
+<td>border-radius</td>
+<td>px</td>
+<td>border radius</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>background-color</td>
+<td>string</td>
+<td>column background color</td>
+<td>none</td>
+</tr>
+<tr>
+<td>thumbnails</td>
+<td>String</td>
+<td>display or not the thumbnails (visible</td>
+<td>hidden)</td>
+</tr>
+<tr>
+<td>tb-border</td>
+<td>css border format</td>
+<td>border of the thumbnails</td>
+<td>none</td>
+</tr>
+<tr>
+<td>tb-border-radius</td>
+<td>px</td>
+<td>border-radius of the thumbnails</td>
+<td>none</td>
+</tr>
+<tr>
+<td>tb-hover-border-color</td>
+<td>string</td>
+<td>css border color of the hovered thumbnail</td>
+<td>none</td>
+</tr>
+<tr>
+<td>tb-selected-border-color</td>
+<td>string</td>
+<td>css border color of the selected thumbnail</td>
+<td>none</td>
+</tr>
+<tr>
+<td>tb-width</td>
+<td>px</td>
+<td>thumbnail width</td>
+<td>null</td>
+</tr>
+<tr>
+<td>left-icon</td>
+<td>url</td>
+<td>icon on the left of the main image</td>
+<td>https://mjml.io/assets/img/left-arrow.png</td>
+</tr>
+<tr>
+<td>right-icon</td>
+<td>url</td>
+<td>icon on the right of the main image</td>
+<td>https://mjml.io/assets/img/right-arrow.png</td>
+</tr>
+<tr>
+<td>icon-width</td>
+<td>px</td>
+<td>width of the icons on left and right of the main image</td>
+<td>44px</td>
+</tr>
+<tr>
+<td>css-class</td>
+<td>string</td>
+<td>class name, added to the root HTML element created</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mjml-carousel-image">mjml-carousel-image</h3>
+<p>This component enables you to add and style the images in the carousel.</p>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>url</td>
+<td>image source</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>thumbnails-src</td>
+<td>url</td>
+<td>image source to have a thumbnail different than the image it's linked to</td>
+<td>null</td>
+</tr>
+<tr>
+<td>href</td>
+<td>url</td>
+<td>link to redirect to on click</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>target</td>
+<td>string</td>
+<td>link target on click</td>
+<td>_blank</td>
+</tr>
+<tr>
+<td>rel</td>
+<td>string</td>
+<td>specify the rel attribute</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>alt</td>
+<td>string</td>
+<td>image description</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>title</td>
+<td>string</td>
+<td>tooltip &amp; accessibility</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>css-class</td>
+<td>string</td>
+<td>class name, added to the root HTML element created</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mjml-column">mjml-column</h2>
+<p>Columns enable you to horizontally organize the content within your sections. They must be located under <code>mj-section</code> tags in order to be considered by the engine.
+To be responsive, columns are expressed in terms of percentage.</p>
+<p>Every single column has to contain something because they are responsive containers, and will be vertically stacked on a mobile view. Any standard component, or component that you have defined and registered, can be placed within a column – except <code>mj-column</code> or <code>mj-section</code> elements.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- Your first column --&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- Your second column --&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-column')" title="column">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<aside class="notice">
+  Columns are meant to be used as a container for your content. They must not be used as offset. Any mj-element included in a column will have a width equivalent to 100% of this column's width.
+</aside>
+<aside class="warning">
+  Columns cannot be nested into columns, and sections cannot be nested into columns as well.
+</aside>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>background-color</td>
+<td>string</td>
+<td>background color for a column</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border</td>
+<td>string</td>
+<td>css border format</td>
+<td>none</td>
+</tr>
+<tr>
+<td>border-bottom</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-left</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-right</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-top</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-radius</td>
+<td>percent/px</td>
+<td>border radius</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>width</td>
+<td>percent/px</td>
+<td>column width</td>
+<td>(100 / number of non-raw elements in section)%</td>
+</tr>
+<tr>
+<td>vertical-align</td>
+<td>string</td>
+<td>middle/top/bottom</td>
+<td>top</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>px</td>
+<td>supports up to 4 parameters</td>
+<td>20px 0</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>px</td>
+<td>section top offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>px</td>
+<td>section bottom offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>px</td>
+<td>section left offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>px</td>
+<td>section right offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>css-class</td>
+<td>string</td>
+<td>class name, added to the root HTML element created</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mjml-divider">mjml-divider</h2>
+<p>Displays a horizontal divider that can be customized like a HTML border.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mj-divider</span> <span class="hljs-attr">border-width</span>=<span class="hljs-string">"1px"</span> <span class="hljs-attr">border-style</span>=<span class="hljs-string">"dashed"</span> <span class="hljs-attr">border-color</span>=<span class="hljs-string">"lightgrey"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-divider')" title="divider">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border-color</td>
+<td>color</td>
+<td>divider color</td>
+<td>#000000</td>
+</tr>
+<tr>
+<td>border-style</td>
+<td>string</td>
+<td>dashed/dotted/solid</td>
+<td>solid</td>
+</tr>
+<tr>
+<td>border-width</td>
+<td>px</td>
+<td>divider's border width</td>
+<td>4px</td>
+</tr>
+<tr>
+<td>width</td>
+<td>px/percent</td>
+<td>divider width</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>container-background-color</td>
+<td>color</td>
+<td>inner element background color</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>px</td>
+<td>supports up to 4 parameters</td>
+<td>10px 25px</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>px</td>
+<td>top offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>px</td>
+<td>bottom offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>px</td>
+<td>left offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>px</td>
+<td>right offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>css-class</td>
+<td>string</td>
+<td>class name, added to the root HTML element created</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mjml-group">mjml-group</h2>
+<p align="center">
+  Desktop<br />
+  <img src="{{root}}/images/a6ad2c1c-274a-11e6-8fdf-6853d748ef27.png" />
+</p>
+<p align="center">
+  Mobile<br />
+  <img src="{{root}}/images/6bb62708-274a-11e6-8c59-0d8b3944a2ae.png" />
+</p>
+<p>mj-group allows you to prevent columns from stacking on mobile. To do so, wrap the columns inside a <code>mj-group</code> tag, so they'll stay side by side on mobile.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-group</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mj-image</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"137px"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"185px"</span> <span class="hljs-attr">padding</span>=<span class="hljs-string">"0"</span>    <span class="hljs-attr">src</span>=<span class="hljs-string">"{{root}}/images/easy-and-quick.png"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"center"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Easy and quick<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Write less code, save time and code more efficiently with MJML’s semantic syntax.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mj-image</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"166px"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"185px"</span> <span class="hljs-attr">padding</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{root}}/images/responsive.png"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"center"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Responsive<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>MJML is responsive by design on most-popular email clients, even Outlook.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-group')" title="group"><img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" /></a>
+</p>
+<aside class="notice">
+  Column inside a group must have a width in percentage, not in pixel
+</aside>
+<aside class="notice">
+  You can have both column and group inside a Section
+</aside>
+<aside class="notice">
+  <b>iOS 9 Issue:</b> If you use a HTML beautifier for MJML output, iOS9 will render your columns inside a mj-group as stacked. On the output HTML, remove the <b>blank space</b> between the two columns inside a mj-group.
+</aside>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>width</td>
+<td>percent/px</td>
+<td>group width</td>
+<td>(100 / number of non-raw elements in section)%</td>
+</tr>
+<tr>
+<td>vertical-align</td>
+<td>string</td>
+<td>middle/top/bottom</td>
+<td>top</td>
+</tr>
+<tr>
+<td>background-color</td>
+<td>string</td>
+<td>background color for a group</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>css-class</td>
+<td>string</td>
+<td>class name, added to the root HTML element created</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mjml-hero">mjml-hero</h2>
+<p>Display a section with a background image and some content inside (mj-text, mj-button, mj-image ...) wrapped in mj-hero-content component</p>
+<p>Fixed height</p>
+<p align="center">
+  <img src="{{root}}/images/bfe7faaa-1cef-11e6-8d38-15e8951b6636.png" />
+</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-hero</span>
+      <span class="hljs-attr">mode</span>=<span class="hljs-string">"fixed-height"</span>
+      <span class="hljs-attr">height</span>=<span class="hljs-string">"469px"</span>
+      <span class="hljs-attr">width</span>=<span class="hljs-string">"100%"</span>
+      <span class="hljs-attr">background-width</span>=<span class="hljs-string">"600px"</span>
+      <span class="hljs-attr">background-height</span>=<span class="hljs-string">"469px"</span>
+      <span class="hljs-attr">background-url</span>=<span class="hljs-string">"https://cloud.githubusercontent.com/assets/1830348/15354890/1442159a-1cf0-11e6-92b1-b861dadf1750.jpg"</span>
+      <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#2a3448"</span>
+      <span class="hljs-attr">padding</span>=<span class="hljs-string">"100px 0px"</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- To add content like mj-image, mj-text, mj-button ... use the mj-hero-content component --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span>
+        <span class="hljs-attr">padding</span>=<span class="hljs-string">"20px"</span>
+        <span class="hljs-attr">color</span>=<span class="hljs-string">"#ffffff"</span>
+        <span class="hljs-attr">font-family</span>=<span class="hljs-string">"Helvetica"</span>
+        <span class="hljs-attr">align</span>=<span class="hljs-string">"center"</span>
+        <span class="hljs-attr">font-size</span>=<span class="hljs-string">"45px"</span>
+        <span class="hljs-attr">line-height</span>=<span class="hljs-string">"45px"</span>
+        <span class="hljs-attr">font-weight</span>=<span class="hljs-string">"900"</span>&gt;</span>
+        GO TO SPACE
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-button</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://mjml.io/"</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"center"</span>&gt;</span>
+        ORDER YOUR TICKET NOW
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-hero</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+ <p align="center">
+   <a href="javascript:void(0)" onclick="openExample('components-hero')" title="hero">
+     <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+   </a>
+ </p>
+<p>Fluid height</p>
+<p align="center">
+  <img src="{{root}}/images/fc2f404a-1cef-11e6-92ac-92de9e438210.png" />
+</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-hero</span>
+      <span class="hljs-attr">mode</span>=<span class="hljs-string">"fluid-height"</span>
+      <span class="hljs-attr">background-width</span>=<span class="hljs-string">"600px"</span>
+      <span class="hljs-attr">background-height</span>=<span class="hljs-string">"469px"</span>
+      <span class="hljs-attr">background-url</span>=<span class="hljs-string">"https://cloud.githubusercontent.com/assets/1830348/15354890/1442159a-1cf0-11e6-92b1-b861dadf1750.jpg"</span>
+      <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#2a3448"</span>
+      <span class="hljs-attr">padding</span>=<span class="hljs-string">"100px 0px"</span>
+      <span class="hljs-attr">width</span>=<span class="hljs-string">"100%"</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- To add content like mj-image, mj-text, mj-button ... use the mj-hero-content component --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span>
+        <span class="hljs-attr">padding</span>=<span class="hljs-string">"20px"</span>
+        <span class="hljs-attr">color</span>=<span class="hljs-string">"#ffffff"</span>
+        <span class="hljs-attr">font-family</span>=<span class="hljs-string">"Helvetica"</span>
+        <span class="hljs-attr">align</span>=<span class="hljs-string">"center"</span>
+        <span class="hljs-attr">font-size</span>=<span class="hljs-string">"45px"</span>
+        <span class="hljs-attr">line-height</span>=<span class="hljs-string">"45px"</span>
+        <span class="hljs-attr">font-weight</span>=<span class="hljs-string">"900"</span>&gt;</span>
+        GO TO SPACE
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-button</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://mjml.io/"</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"center"</span>&gt;</span>
+        ORDER YOUR TICKET NOW
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-hero</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-hero-1')" title="hero-1">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<aside class="notice">
+  The height attribute is required only for the fixed-height mode
+</aside>
+<aside class="notice">
+  <span style="font-weight:bold;">The background position does not work in fluid-height mode on outlook.com</span>
+</aside>
+<aside class="notice">
+For better result we encourage you to use a background image width equal to the hero container width and always specify a fallback background color, in case the user email client does not support background images.
+</aside>
+<aside class="notice">
+  Please keep the hero container height below the image height. When the hero container height - both in fixed or fluid modes - is greater than the background image height, we can’t guarantee a perfect rendering in all supported email clients
+</aside>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>width</td>
+<td>px</td>
+<td>hero container width</td>
+<td>parent element width</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>fluid-height/fixed-height</td>
+<td>choose if the height is fixed based on the height attribute or fluid</td>
+<td>fluid-height</td>
+</tr>
+<tr>
+<td>height</td>
+<td>px</td>
+<td>hero section height (required for fixed-height mode)</td>
+<td>0px</td>
+</tr>
+<tr>
+<td>background-width</td>
+<td>px</td>
+<td>width of the image used</td>
+<td>0px</td>
+</tr>
+<tr>
+<td>background-height</td>
+<td>px</td>
+<td>height of the image used</td>
+<td>0px</td>
+</tr>
+<tr>
+<td>background-url</td>
+<td>url</td>
+<td>absolute background url</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>background-color</td>
+<td>color</td>
+<td>hero background color</td>
+<td>#ffffff</td>
+</tr>
+<tr>
+<td>background-position</td>
+<td>top/center/bottom left/center/right</td>
+<td>background image position</td>
+<td>center center</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>px</td>
+<td>supports up to 4 parameters</td>
+<td>0px</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>px</td>
+<td>top offset</td>
+<td>0px</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>px</td>
+<td>right offset</td>
+<td>0px</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>px</td>
+<td>left offset</td>
+<td>0px</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>px</td>
+<td>bottom offset</td>
+<td>0px</td>
+</tr>
+<tr>
+<td>vertical-align</td>
+<td>top/middle/bottom</td>
+<td>content vertical alignment</td>
+<td>top</td>
+</tr>
+<tr>
+<td>css-class</td>
+<td>string</td>
+<td>class name, added to the root HTML element created</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mjml-image">mjml-image</h2>
+<p>Displays a responsive image in your email. It is similar to the HTML <code>&lt;img /&gt;</code> tag.
+Note that if no width is provided, the image will use the parent column width.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mj-image</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"300px"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{root}}/images/example_image.png"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-image')" title="image">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>padding</td>
+<td>px</td>
+<td>supports up to 4 parameters</td>
+<td>10px 25px</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>px</td>
+<td>top offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>px</td>
+<td>bottom offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>px</td>
+<td>left offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>px</td>
+<td>right offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>container-background-color</td>
+<td>color</td>
+<td>inner element background color</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border</td>
+<td>string</td>
+<td>css border definition</td>
+<td>none</td>
+</tr>
+<tr>
+<td>border-radius</td>
+<td>px</td>
+<td>border radius</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>width</td>
+<td>px</td>
+<td>image width</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>height</td>
+<td>px</td>
+<td>image height</td>
+<td>auto</td>
+</tr>
+<tr>
+<td>src</td>
+<td>url</td>
+<td>image source</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>srcset</td>
+<td>url &amp; width</td>
+<td>enables to set a different image source based on the viewport</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>href</td>
+<td>url</td>
+<td>link to redirect to on click</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>target</td>
+<td>string</td>
+<td>link target on click</td>
+<td>_blank</td>
+</tr>
+<tr>
+<td>rel</td>
+<td>string</td>
+<td>specify the rel attribute</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>alt</td>
+<td>string</td>
+<td>image description</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>align</td>
+<td>position</td>
+<td>image alignment</td>
+<td>center</td>
+</tr>
+<tr>
+<td>title</td>
+<td>string</td>
+<td>tooltip &amp; accessibility</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>css-class</td>
+<td>string</td>
+<td>class name, added to the root HTML element created</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>fluid-on-mobile</td>
+<td>string</td>
+<td>if &quot;true&quot;, will be full width on mobile even if width is set</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mjml-navbar">mjml-navbar</h2>
+<p align="center">
+  <img src="{{root}}/images/d6cef510-1c23-11e6-83d7-31e4e4f8ba2a.png" width="800px" />
+</p>
+<p>Displays a menu for navigation with an optional hamburger mode for mobile devices.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#ef6451"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mj-navbar</span> <span class="hljs-attr">base-url</span>=<span class="hljs-string">"https://mjml.io"</span> <span class="hljs-attr">hamburger</span>=<span class="hljs-string">"hamburger"</span> <span class="hljs-attr">ico-color</span>=<span class="hljs-string">"#ffffff"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">mj-navbar-link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/gettings-started-onboard"</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"#ffffff"</span>&gt;</span>Getting started<span class="hljs-tag">&lt;/<span class="hljs-name">mj-navbar-link</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">mj-navbar-link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/try-it-live"</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"#ffffff"</span>&gt;</span>Try it live<span class="hljs-tag">&lt;/<span class="hljs-name">mj-navbar-link</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">mj-navbar-link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/templates"</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"#ffffff"</span>&gt;</span>Templates<span class="hljs-tag">&lt;/<span class="hljs-name">mj-navbar-link</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">mj-navbar-link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/components"</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"#ffffff"</span>&gt;</span>Components<span class="hljs-tag">&lt;/<span class="hljs-name">mj-navbar-link</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mj-navbar</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a target="_blank" href="javascript:void(0)" onclick="openExample('components-navbar')" title="navbar">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<h3 id="mjml-navbar-2">mjml-navbar</h3>
+<p>Individual links of the menu should we wrapped inside mj-navbar.</p>
+<p>Standard Desktop:</p>
+<p align="center">
+  <img src="{{root}}/images/d6cef510-1c23-11e6-83d7-31e4e4f8ba2a.png" width="800px" />
+</p>
+<p>Standard Mobile:</p>
+<p align="center">
+  <img src="{{root}}/images/e514d0a4-1c23-11e6-8e5a-c23da9ac1d4e.png" width="318px" />
+</p>
+<p>Mode hamburger enabled:</p>
+<p align="center">
+  <img src="{{root}}/images/f01c5c24-1c23-11e6-9b0c-95b0602da260.gif" width="309px" />
+</p>
+<aside class="notice">
+  The "hamburger" feature only work on mobile device with all iOS mail client, for others mail clients the render is performed on an normal way, the links are displayed inline and the hamburger is not visible.
+</aside>
+<aside class="notice">
+  All the attributes prefixed with <code>ico-</code> help to customize the hamburger icon. They only work with the hamburger mode enabled.
+</aside>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>base url</td>
+<td>string</td>
+<td>base url for children components</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>hamburger</td>
+<td>string</td>
+<td>activate the hamburger navigation on mobile if the value is hamburger</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>align</td>
+<td>string</td>
+<td>align content left/center/right</td>
+<td>center</td>
+</tr>
+<tr>
+<td>ico-open</td>
+<td>ASCII code decimal</td>
+<td>char code for a custom open icon (hamburger mode required)</td>
+<td>9776</td>
+</tr>
+<tr>
+<td>ico-close</td>
+<td>ASCII code decimal</td>
+<td>char code for a custom close icon (hamburger mode required)</td>
+<td>8855</td>
+</tr>
+<tr>
+<td>ico-padding</td>
+<td>px</td>
+<td>hamburger icon padding, supports up to 4 parameters (hamburger mode required)</td>
+<td>10px</td>
+</tr>
+<tr>
+<td>ico-padding-top</td>
+<td>px</td>
+<td>hamburger icon top offset (hamburger mode required)</td>
+<td>10px</td>
+</tr>
+<tr>
+<td>ico-padding-right</td>
+<td>px</td>
+<td>hamburger icon right offset (hamburger mode required)</td>
+<td>10px</td>
+</tr>
+<tr>
+<td>ico-padding-bottom</td>
+<td>px</td>
+<td>hamburger icon bottom offset (hamburger mode required)</td>
+<td>10px</td>
+</tr>
+<tr>
+<td>ico-padding-left</td>
+<td>px</td>
+<td>hamburger icon left offset (hamburger mode required)</td>
+<td>10px</td>
+</tr>
+<tr>
+<td>ico-align</td>
+<td>string</td>
+<td>hamburger icon alignment, left/center/right (hamburger mode required)</td>
+<td>center</td>
+</tr>
+<tr>
+<td>ico-color</td>
+<td>color format</td>
+<td>hamburger icon color (hamburger mode required)</td>
+<td>#000000</td>
+</tr>
+<tr>
+<td>ico-font-size</td>
+<td>px</td>
+<td>hamburger icon size (hamburger mode required)</td>
+<td>30px</td>
+</tr>
+<tr>
+<td>ico-font-family</td>
+<td>string</td>
+<td>hamburger icon font (only on hamburger mode)</td>
+<td>Ubuntu, Helvetica, Arial, sans-serif</td>
+</tr>
+<tr>
+<td>ico-text-transform</td>
+<td>string</td>
+<td>hamburger icon text transformation none/capitalize/uppercase/lowercase (hamburger mode required)</td>
+<td>none</td>
+</tr>
+<tr>
+<td>ico-text-decoration</td>
+<td>string</td>
+<td>hamburger icon text decoration none/underline/overline/line-through (hamburger mode required)</td>
+<td>none</td>
+</tr>
+<tr>
+<td>ico-line-height</td>
+<td>px</td>
+<td>hamburger icon line height (hamburger mode required)</td>
+<td>30px</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mjml-navbar-link">mjml-navbar-link</h3>
+<p>This component should be used to display an individual link in the navbar.</p>
+<aside class="notice">
+  The mj-navbar-link component must be used inside a mj-navbar component only.
+</aside>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>color</td>
+<td>text color</td>
+<td>#000000</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>string</td>
+<td>font</td>
+<td>Ubuntu, Helvetica, Arial, sans-serif</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>px</td>
+<td>text size</td>
+<td>13px</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>string</td>
+<td>normal/italic/oblique</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>number</td>
+<td>text thickness</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>line-height</td>
+<td>px</td>
+<td>space between the lines</td>
+<td>22px</td>
+</tr>
+<tr>
+<td>text-decoration</td>
+<td>string</td>
+<td>underline/overline/none</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>text-transform</td>
+<td>string</td>
+<td>capitalize/uppercase/lowercase/none</td>
+<td>uppercase</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>px</td>
+<td>supports up to 4 parameters</td>
+<td>10px 25px</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>px</td>
+<td>top offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>px</td>
+<td>bottom offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>px</td>
+<td>left offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>px</td>
+<td>right offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>rel</td>
+<td>string</td>
+<td>specify the rel attribute</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>href</td>
+<td>string</td>
+<td>link to redirect to on click</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>target</td>
+<td>string</td>
+<td>link target on click</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mjml-raw">mjml-raw</h2>
+<p>Displays raw HTML that is not going to be parsed by the MJML engine. Anything left inside this tag should be raw, responsive HTML.
+If placed inside <code>&lt;mj-head&gt;</code>, its content will be added at the end of the <code>&lt;head&gt;</code>.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-raw</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- Your content goes here --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-raw</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a target="_blank" href="javascript:void(0)" onclick="openExample('components-raw')" title="raw">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<h2 id="mjml-section">mjml-section</h2>
+<p>Sections are intended to be used as rows within your email.
+They will be used to structure the layout.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span> <span class="hljs-attr">full-width</span>=<span class="hljs-string">"full-width"</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"red"</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- Your columns go here --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-section')" title="section">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<p>The <code>full-width</code> property will be used to manage the background width.
+By default, it will be 600px. With the <code>full-width</code> property on, it will be
+changed to 100%.</p>
+<aside class="notice">
+  <b>Inverting the order in which columns display:</b> set the `direction` attribute to `rtl` to change the order in which columns display on desktop. Because MJML is mobile-first, structure the columns in the <b>order you want them to stack on mobile</b>, and use `direction` to change the order they display <b>on desktop</b>.
+</aside>
+<aside class="warning">
+  Sections cannot be nested into sections. Also, any content in a section should also be wrapped in a column.
+</aside>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>full-width</td>
+<td>string</td>
+<td>make the section full-width</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border</td>
+<td>string</td>
+<td>css border format</td>
+<td>none</td>
+</tr>
+<tr>
+<td>border-bottom</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-left</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-right</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-top</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-radius</td>
+<td>px</td>
+<td>border radius</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>background-color</td>
+<td>color</td>
+<td>section color</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>background-url</td>
+<td>url</td>
+<td>background url</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>background-repeat</td>
+<td>string</td>
+<td>css background repeat</td>
+<td>repeat</td>
+</tr>
+<tr>
+<td>background-size</td>
+<td>percent/px</td>
+<td>css background size</td>
+<td>auto</td>
+</tr>
+<tr>
+<td>vertical-align</td>
+<td>string</td>
+<td>css vertical-align</td>
+<td>top</td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>string</td>
+<td>css text-align</td>
+<td>center</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>px</td>
+<td>supports up to 4 parameters</td>
+<td>20px 0</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>px</td>
+<td>section top offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>px</td>
+<td>section bottom offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>px</td>
+<td>section left offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>px</td>
+<td>section right offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>string</td>
+<td>ltr / rtl</td>
+<td>ltr</td>
+</tr>
+<tr>
+<td>css-class</td>
+<td>string</td>
+<td>class name, added to the root HTML element created</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mjml-social">mjml-social</h2>
+<p align="center">
+  <img src="{{root}}/images/0c78ce48-c9bd-11e5-98ca-4a2ac9e6341b.png" alt="desktop" style="width: 250px;"/>
+</p>
+<p>Displays calls-to-action for various social networks with their associated logo. You can add social networks with the <code>mj-social-element</code> tag.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mj-social</span> <span class="hljs-attr">font-size</span>=<span class="hljs-string">"15px"</span> <span class="hljs-attr">icon-size</span>=<span class="hljs-string">"30px"</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">"horizontal"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mj-social-element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"facebook"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://mjml.io/"</span>&gt;</span>
+            Facebook
+          <span class="hljs-tag">&lt;/<span class="hljs-name">mj-social-element</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mj-social-element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"google"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://mjml.io/"</span>&gt;</span>
+            Google
+          <span class="hljs-tag">&lt;/<span class="hljs-name">mj-social-element</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mj-social-element</span>  <span class="hljs-attr">name</span>=<span class="hljs-string">"twitter"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://mjml.io/"</span>&gt;</span>
+            Twitter
+          <span class="hljs-tag">&lt;/<span class="hljs-name">mj-social-element</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mj-social</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-social')" title="social">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border-radius</td>
+<td>px</td>
+<td>border radius</td>
+<td>3px</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>string</td>
+<td>font name</td>
+<td>Ubuntu, Helvetica, Arial, sans-serif</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>px/em</td>
+<td>font size</td>
+<td>13px</td>
+</tr>
+<tr>
+<td>icon-size</td>
+<td>percent/px</td>
+<td>icon size (width and height)</td>
+<td>20px</td>
+</tr>
+<tr>
+<td>icon-height</td>
+<td>percent/px</td>
+<td>icon height, overrides icon-size</td>
+<td>icon-size</td>
+</tr>
+<tr>
+<td>line-height</td>
+<td>percent/px</td>
+<td>space between lines</td>
+<td>22px</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>string</td>
+<td>vertical/horizontal</td>
+<td>horizontal</td>
+</tr>
+<tr>
+<td>text-decoration</td>
+<td>string</td>
+<td>underline/overline/none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>align</td>
+<td>string</td>
+<td>left/right/center</td>
+<td>center</td>
+</tr>
+<tr>
+<td>color</td>
+<td>color</td>
+<td>text color</td>
+<td>#333333</td>
+</tr>
+<tr>
+<td>inner-padding</td>
+<td>px</td>
+<td>social network surrounding padding</td>
+<td>4px</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>px</td>
+<td>supports up to 4 parameters</td>
+<td>10px 25px</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>px</td>
+<td>top offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>px</td>
+<td>bottom offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>px</td>
+<td>left offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>px</td>
+<td>right offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>container-background-color</td>
+<td>color</td>
+<td>inner element background color</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mj-social-element">mj-social-element</h3>
+<p>This component enables you to display a given social network inside <code>mj-social</code>.<br>
+Note that default icons are transparent, which allows <code>background-color</code> to actually be the icon color.</p>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border-radius</td>
+<td>px</td>
+<td>border radius</td>
+<td>3px</td>
+</tr>
+<tr>
+<td>href</td>
+<td>url</td>
+<td>button redirection url</td>
+<td>[[SHORT_PERMALINK]]</td>
+</tr>
+<tr>
+<td>target</td>
+<td>string</td>
+<td>link target</td>
+<td>_blank</td>
+</tr>
+<tr>
+<td>background-color</td>
+<td>color</td>
+<td>icon color</td>
+<td>Each social <code>name</code> has its own default</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>string</td>
+<td>font name</td>
+<td>Ubuntu, Helvetica, Arial, sans-serif</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>px/em</td>
+<td>font size</td>
+<td>13px</td>
+</tr>
+<tr>
+<td>icon-size</td>
+<td>percent/px</td>
+<td>icon size (width and height)</td>
+<td>20px</td>
+</tr>
+<tr>
+<td>icon-height</td>
+<td>percent/px</td>
+<td>icon height, overrides icon-size</td>
+<td>icon-size</td>
+</tr>
+<tr>
+<td>line-height</td>
+<td>percent/px</td>
+<td>space between lines</td>
+<td>22px</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>string</td>
+<td>vertical/horizontal</td>
+<td>horizontal</td>
+</tr>
+<tr>
+<td>text-decoration</td>
+<td>string</td>
+<td>underline/overline/none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>align</td>
+<td>string</td>
+<td>left/right/center</td>
+<td>center</td>
+</tr>
+<tr>
+<td>color</td>
+<td>color</td>
+<td>text color</td>
+<td>#333333</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>social network name, see supported list below</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>src</td>
+<td>url</td>
+<td>image source</td>
+<td>Each social <code>name</code> has its own default</td>
+</tr>
+<tr>
+<td>alt</td>
+<td>string</td>
+<td>image alt attribute</td>
+<td>none</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>px</td>
+<td>supports up to 4 parameters</td>
+<td>10px 25px</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>px</td>
+<td>top offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>px</td>
+<td>bottom offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>px</td>
+<td>left offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>px</td>
+<td>right offset</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<p>Supported networks with a share url:</p>
+<ul>
+<li>facebook</li>
+<li>twitter</li>
+<li>google</li>
+<li>pinterest</li>
+<li>linkedin</li>
+<li>tumblr</li>
+<li>xing</li>
+</ul>
+<p>Without a share url:</p>
+<ul>
+<li>github</li>
+<li>instagram</li>
+<li>web</li>
+<li>snapchat</li>
+<li>youtube</li>
+<li>vimeo</li>
+<li>medium</li>
+<li>soundcloud</li>
+<li>dribbble</li>
+</ul>
+<p>When using a network with share url, the <code>href</code> attribute will be inserted in the share url (i.e. <code>https://www.facebook.com/sharer/sharer.php?u=[[URL]]</code>). To keep your <code>href</code> unchanged, add <code>-noshare</code> to the network name. Example :</p>
+<p><code>&lt;mj-social-element name=&quot;twitter-noshare&quot; href=&quot;my-unchanged-url&quot;&gt;Twitter&lt;/mj-social-element&gt;</code></p>
+<h3 id="custom-social-element">Custom Social Element</h3>
+<p>You can add any unsupported network like this:</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mj-social-element</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">"#FF00FF"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{root}}/images/path-to-your-icon"</span>&gt;</span>
+  Optional label
+<span class="hljs-tag">&lt;/<span class="hljs-name">mj-social-element</span>&gt;</span>
+</div></code></pre>
+<h2 id="mjml-spacer">mjml-spacer</h2>
+<p>Displays a blank space.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span>&gt;</span>A first line of text<span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mj-spacer</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"50px"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span>&gt;</span>A second line of text<span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-spacer')" title="spacer">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>height</td>
+<td>px</td>
+<td>spacer height</td>
+<td>20px</td>
+</tr>
+<tr>
+<td>width</td>
+<td>px</td>
+<td>spacer width</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border</td>
+<td>string</td>
+<td>css border format</td>
+<td>none</td>
+</tr>
+<tr>
+<td>border-bottom</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-left</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-right</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-top</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>container-background-color</td>
+<td>color</td>
+<td>inner element background color</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>px</td>
+<td>supports up to 4 parameters</td>
+<td>none</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>px</td>
+<td>top offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>px</td>
+<td>bottom offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>px</td>
+<td>left offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>px</td>
+<td>right offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>vertical-align</td>
+<td>string</td>
+<td>vertical alignment</td>
+<td>middle</td>
+</tr>
+<tr>
+<td>css-class</td>
+<td>string</td>
+<td>class name, added to the root HTML element created</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mjml-table">mjml-table</h2>
+<p>This tag allows you to display table and filled it with data. It only accepts plain HTML.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mj-table</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding: 0 15px 0 0;"</span>&gt;</span>Year<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding: 0 15px;"</span>&gt;</span>Language<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding: 0 0 0 15px;"</span>&gt;</span>Inspired from<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding: 0 15px 0 0;"</span>&gt;</span>1995<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding: 0 15px;"</span>&gt;</span>PHP<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding: 0 0 0 15px;"</span>&gt;</span>C, Shell Unix<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding: 0 15px 0 0;"</span>&gt;</span>1995<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding: 0 15px;"</span>&gt;</span>JavaScript<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding: 0 0 0 15px;"</span>&gt;</span>Scheme, Self<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mj-table</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-table')" title="table">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>color</td>
+<td>text header &amp; footer color</td>
+<td>#000000</td>
+</tr>
+<tr>
+<td>cellpadding</td>
+<td>pixels</td>
+<td>space between cells</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>cellspacing</td>
+<td>pixels</td>
+<td>space between cell and border</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>string</td>
+<td>font name</td>
+<td>Ubuntu, Helvetica, Arial, sans-serif</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>px</td>
+<td>font size</td>
+<td>13px</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>string</td>
+<td>font style</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>line-height</td>
+<td>percent/px</td>
+<td>space between lines</td>
+<td>22px</td>
+</tr>
+<tr>
+<td>container-background-color</td>
+<td>color</td>
+<td>inner element background color</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>percent/px</td>
+<td>supports up to 4 parameters</td>
+<td>10px 25px</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>percent/px</td>
+<td>top offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>percent/px</td>
+<td>bottom offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>percent/px</td>
+<td>left offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>percent/px</td>
+<td>right offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>width</td>
+<td>percent/px</td>
+<td>table width</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>table-layout</td>
+<td>auto/fixed/initial/inherit</td>
+<td>sets the table layout.</td>
+<td>auto</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mjml-text">mjml-text</h2>
+<p>This tag allows you to display text in your email.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>
+           Hey Title!
+         <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+       <span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-text')" title="text">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<aside class="notice">
+  `MjText` can contain any HTML tag with any attributes. Don't forget to encode special characters to avoid unexpected behaviour from MJML's parser
+</aside>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>color</td>
+<td>text color</td>
+<td>#000000</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>string</td>
+<td>font</td>
+<td>Ubuntu, Helvetica, Arial, sans-serif</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>px</td>
+<td>text size</td>
+<td>13px</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>string</td>
+<td>normal/italic/oblique</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>number</td>
+<td>text thickness</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>line-height</td>
+<td>px</td>
+<td>space between the lines</td>
+<td>22px</td>
+</tr>
+<tr>
+<td>letter-spacing</td>
+<td>px</td>
+<td>letter spacing</td>
+<td>none</td>
+</tr>
+<tr>
+<td>height</td>
+<td>px</td>
+<td>The height of the element</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>text-decoration</td>
+<td>string</td>
+<td>underline/overline/line-through/none</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>text-transform</td>
+<td>string</td>
+<td>uppercase/lowercase/capitalize</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>align</td>
+<td>string</td>
+<td>left/right/center/justify</td>
+<td>left</td>
+</tr>
+<tr>
+<td>container-background-color</td>
+<td>color</td>
+<td>inner element background color</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>px</td>
+<td>supports up to 4 parameters</td>
+<td>10px 25px</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>px</td>
+<td>top offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>px</td>
+<td>bottom offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>px</td>
+<td>left offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>px</td>
+<td>right offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>css-class</td>
+<td>string</td>
+<td>class name, added to the root HTML element created</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mjml-wrapper">mjml-wrapper</h2>
+<p align="center">
+  <img src="{{root}}/images/6YKq83B.png" alt="wrapper" />
+</p>
+<p>Wrapper enables to wrap multiple sections together. It's especially useful to achieve nested layouts with shared border or background images across sections.</p>
+<pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">mjml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mj-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mj-wrapper</span> <span class="hljs-attr">border</span>=<span class="hljs-string">"1px solid #000000"</span> <span class="hljs-attr">padding</span>=<span class="hljs-string">"50px 30px"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span> <span class="hljs-attr">border-top</span>=<span class="hljs-string">"1px solid #aaaaaa"</span> <span class="hljs-attr">border-left</span>=<span class="hljs-string">"1px solid #aaaaaa"</span> <span class="hljs-attr">border-right</span>=<span class="hljs-string">"1px solid #aaaaaa"</span> <span class="hljs-attr">padding</span>=<span class="hljs-string">"20px"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mj-image</span> <span class="hljs-attr">padding</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{root}}/images/~text?&amp;w=350&amp;h=150"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mj-section</span> <span class="hljs-attr">border-left</span>=<span class="hljs-string">"1px solid #aaaaaa"</span> <span class="hljs-attr">border-right</span>=<span class="hljs-string">"1px solid #aaaaaa"</span> <span class="hljs-attr">padding</span>=<span class="hljs-string">"20px"</span> <span class="hljs-attr">border-bottom</span>=<span class="hljs-string">"1px solid #aaaaaa"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mj-column</span> <span class="hljs-attr">border</span>=<span class="hljs-string">"1px solid #dddddd"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span> <span class="hljs-attr">padding</span>=<span class="hljs-string">"20px"</span>&gt;</span> First line of text <span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mj-divider</span> <span class="hljs-attr">border-width</span>=<span class="hljs-string">"1px"</span> <span class="hljs-attr">border-style</span>=<span class="hljs-string">"dashed"</span> <span class="hljs-attr">border-color</span>=<span class="hljs-string">"lightgrey"</span> <span class="hljs-attr">padding</span>=<span class="hljs-string">"0 20px"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mj-text</span> <span class="hljs-attr">padding</span>=<span class="hljs-string">"20px"</span>&gt;</span> Second line of text <span class="hljs-tag">&lt;/<span class="hljs-name">mj-text</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mj-column</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mj-section</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mj-wrapper</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mj-body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mjml</span>&gt;</span>
+</div></code></pre>
+<p align="center">
+  <a href="javascript:void(0)" onclick="openExample('components-wrapper')" title="wrapper">
+    <img width="100px" src="{{root}}/images/TRYITLIVE.svg" alt="try it live" />
+  </a>
+</p>
+<p>The <code>full-width</code> property will be used to manage the background width.
+By default, it will be 600px. With the <code>full-width</code> property on, it will be
+changed to 100%.</p>
+<aside class="notice">
+  You can't nest a full-width section inside a full-width wrapper, section will act as a non-full-width section.
+</aside>
+<aside class="notice">
+  If you're using a background-url on a `mj-wrapper` then do not add one into a section within the mj-wrapper. Outlook Desktop doesn't support nested VML, so it will most likely break your email.
+</aside>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>unit</th>
+<th>description</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>full-width</td>
+<td>string</td>
+<td>make the wrapper full-width</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border</td>
+<td>string</td>
+<td>css border format</td>
+<td>none</td>
+</tr>
+<tr>
+<td>border-bottom</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-left</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-right</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-top</td>
+<td>string</td>
+<td>css border format</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>border-radius</td>
+<td>px</td>
+<td>border radius</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>background-color</td>
+<td>color</td>
+<td>section color</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>background-url</td>
+<td>url</td>
+<td>background url</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>background-repeat</td>
+<td>string</td>
+<td>css background repeat</td>
+<td>repeat</td>
+</tr>
+<tr>
+<td>background-size</td>
+<td>percent/px</td>
+<td>css background size</td>
+<td>auto</td>
+</tr>
+<tr>
+<td>vertical-align</td>
+<td>string</td>
+<td>css vertical-align</td>
+<td>top</td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>string</td>
+<td>css text-align</td>
+<td>center</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>px</td>
+<td>supports up to 4 parameters</td>
+<td>20px 0</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>px</td>
+<td>section top offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>px</td>
+<td>section bottom offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>px</td>
+<td>section left offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>px</td>
+<td>section right offset</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>css-class</td>
+<td>string</td>
+<td>class name, added to the root HTML element created</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h1 id="community-components">Community components</h1>
+<p>In addition to the standard components available in MJML, our awesome community is contributing by creating their own components.</p>
+<p>To use a community component, proceed as follows:</p>
+<ul>
+<li>Install MJML locally with <code>npm install mjml</code> in a folder</li>
+<li>Install the community component with <code>npm install {component-name}</code> in the same folder</li>
+<li>Create a <code>.mjmlconfig</code> file in the same folder with:</li>
+</ul>
+<pre><code>{
+  &quot;packages&quot;: [
+    &quot;component-name/path-to-js-file&quot;
+  ]
+}
+</code></pre>
+<p>Finally, you can now use the component in a MJML file, for example <code>index.mjml</code>, and run MJML locally in your terminal (make sure to be in the folder where you installed MJML and the community component): <code>./node_modules/.bin/mjml index.mjml</code>.</p>
+<h2 id="mjml-chart">mjml-chart</h2>
+<p>Thanks to <a href="https://image-charts.com/">image-charts</a> for their contribution with this component. It's available on <a href="https://github.com/image-charts/mjml-charts">Github</a> and <a href="https://www.npmjs.com/package/mjml-chart">NPM</a>.</p>
+<p align="center">
+  <img src="{{root}}/images/cd01defdac.png" alt="mjml-charts" />
+</p>
+<p>Displays charts as images in your email.</p>
+<h1 id="creating-a-component">Creating a Component</h1>
+<p>One of the great advantages of MJML is that it's component-based. Components abstract complex patterns and can easily be reused. In addition to the standard library of components, it is also possible to create your own components!</p>
+<p>We have published a step-by-step guide <a href="https://medium.com/mjml-making-responsive-email-easy/tutorial-creating-your-own-component-with-mjml-4-1c0e84e97b36">here</a> that explains how to create a custom components with MJML 4. It will introduce to you the <a href="https://github.com/mjmlio/mjml-component-boilerplate">boilerplate repo</a> hosted on Github, which provides a fast way of getting started developing your own components.</p>
+<p>Read the guide to creating custom components for MJML 3 <a href="https://medium.com/mjml-making-responsive-email-easy/tutorial-creating-your-own-mjml-component-d3a236ab7093#.pz0ebb537">here</a> (note that it won't be compatible with MJML 4).</p>
+
+    </body>
+    </html>

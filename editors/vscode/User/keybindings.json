@@ -53,5 +53,15 @@
 		"key": "alt+right",
 		"command": "-workbench.action.terminal.focusNextPane",
 		"when": "terminalFocus"
+	},
+	{
+		"key": "ctrl+shift+e",
+		"command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+		"when": "inFilesPicker && inQuickOpen"
+	},
+	{
+		"key": "ctrl+shift+e",
+		"command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+		"when": "inFilesPicker && inQuickOpen"
 	}
 ]

@@ -1,0 +1,24 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      @media all and (max-width: 480px) { div[style*="color:#F45e46;"] { text-align: center !important } }
+    </mj-style>
+    <mj-style inline="inline">
+      .link-nostyle { color: inherit; text-decoration: none }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-image width="100" src="https://mjml.io/assets/img/logo-small.png"></mj-image>
+
+        <mj-divider border-color="#F45E43"></mj-divider>
+
+        <mj-text font-size="20px" color="#F45e46" font-family="helvetica">
+          Hello <a href="https://mjml.io" class="link-nostyle">World</a>
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

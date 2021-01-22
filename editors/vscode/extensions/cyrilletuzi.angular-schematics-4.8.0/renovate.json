@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "packageRules": [
+    {
+      "packageNames": ["@types/vscode"],
+      "allowedVersions": "<1.42"
+    },
+    {
+      "packageNames": ["@types/node"],
+      "allowedVersions": "<13"
+    }
+  ],
+  "schedule": ["after 1am and before 7am on friday"],
+  "timezone": "Europe/Paris",
+  "prHourlyLimit": 0
+}
