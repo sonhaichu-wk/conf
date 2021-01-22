@@ -324,7 +324,7 @@
 		"@types/node": "*",
 		"@types/nodemailer": "^4.6.5",
 		"@types/npm": "^2.0.29",
-		"highlight.js": "^9.13.1",
+		"highlight.js": "^10.4.1",
 		"markdown-it-anchor": "^5.0.2",
 		"markdown-it": "^8.4.2",
 		"tslint": "^5.11.0",
