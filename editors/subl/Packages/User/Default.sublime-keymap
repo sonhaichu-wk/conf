@@ -8,5 +8,9 @@
     "keys": ["ctrl+i"], 
     "command": "run_macro_file", 
     "args": {"file": "res://Packages/User/initialize_properties.sublime-macro"} 
-	}
+	},
+	{ "keys": ["ctrl+alt+f"], "command": "js_prettier" },
+	{ "keys": ["ctrl+alt+i"], "command": "import_js", "args": { "command": "fix" } },
+  { "keys": ["ctrl+alt+j"], "command": "import_js", "args": { "command": "word" } },
+  { "keys": ["ctrl+alt+g"], "command": "import_js", "args": { "command": "goto" } }
 ]
