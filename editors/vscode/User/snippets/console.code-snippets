@@ -9,6 +9,6 @@
   "Custom print to console": {
     "scope": "javascript,typescript",
     "prefix": "csl",
-    "body": ["console.log($1);$2"]
+    "body": ["console.log('------------$1------------', $1$2);"]
   }
 }
