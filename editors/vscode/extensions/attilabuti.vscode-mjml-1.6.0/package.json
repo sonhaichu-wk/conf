@@ -336,7 +336,7 @@
 		"js-beautify": "^1.8.8",
 		"mime": "^2.3.1",
 		"mjml": "^4.2.0",
-		"node-fetch": "^2.2.0",
+		"node-fetch": "^2.6.7",
 		"node-mailjet": "^3.3.1",
 		"nodemailer": "^4.6.8",
 		"npm": "^6.4.1",
